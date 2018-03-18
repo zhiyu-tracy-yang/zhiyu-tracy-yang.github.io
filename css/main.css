@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c1ffff;
+  background: #283454;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2659,4 +2659,19 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+body {
+  background-image: url("../images/triangular2X.png");
+  background-repeat: repeat;
+}
+.header {
+  background-image: url("../images/bio.jpg");
+  background-size: 100%;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #fff;
+  min-height: 500px;
+  opacity: 0.9;
 }
