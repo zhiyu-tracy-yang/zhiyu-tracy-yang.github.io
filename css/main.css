@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #283454;
+  background: #939a40;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2665,7 +2665,7 @@ body {
   background-repeat: repeat;
 }
 .header {
-  background-image: url("../images/bio.jpg");
+  background-image: url("../images/banner-blue-leaf.jpg");
   background-size: 100%;
 }
 .main-inner {
