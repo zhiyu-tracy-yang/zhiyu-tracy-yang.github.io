@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -96,7 +96,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Muse',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -345,77 +345,23 @@
       
         
           
-            <p>Reference: <a href="https://www.zhihu.com/question/23177722/answer/30260772" target="_blank" rel="noopener">market size 估算的一类问题应该怎么思考？ - 林梓默的回答 - 知乎</a></p>
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>根据这个回答，分为两种问题。</p>
-<ul>
-<li>第一种：问具体数字。电商一年卖多少本书？</li>
-<li>第二种：问服务的次数。北京多少加油站？</li>
-</ul>
-<hr>
-<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><ul>
-<li>第一种问题考虑角度：供应/需求 （Supply/Demand)<br>从需求角度：数量 = 消费人群 × 消费频率 × 单位时间</li>
-<li>第二种考虑角度：数量 =（单位时间内）服务的总次数 ÷ 频</li>
-</ul>
-<hr>
-<h1 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h1><h2 id="第一种举例：电商一年大约卖多少本书？"><a href="#第一种举例：电商一年大约卖多少本书？" class="headerlink" title="第一种举例：电商一年大约卖多少本书？"></a>第一种举例：电商一年大约卖多少本书？</h2><h3 id="公式：书总数量（本）-①用户总数（人）×-②书数量（本-人-年）×-1（年）"><a href="#公式：书总数量（本）-①用户总数（人）×-②书数量（本-人-年）×-1（年）" class="headerlink" title="公式：书总数量（本）= ①用户总数（人）× ②书数量（本/人/年）× 1（年）"></a>公式：书总数量（本）= ①用户总数（人）× ②书数量（本/人/年）× 1（年）</h3><ol>
-<li>消费人群：电商用户（未知）</li>
-<li>消费频率：一位电商用户一年买书的数量（未知）</li>
-<li>单位时间：一年（已知）</li>
-</ol>
-<p><em>简单来看：假设电商只有1位用户，这位用户每月买1本书。那么在一年内（12个月），这位用户买了 12 × 1 = 12 本书。也就是说，电商这一年内卖出了12本书，因为它只有这一位用户。（很简单的情况）</em></p>
-<h3 id="分步："><a href="#分步：" class="headerlink" title="分步："></a>分步：</h3><ol>
-<li><p>电商有多少用户？<br>① 电商用户总数 = 中国网民总数 x 电商网站的市场比例</p>
-<ul>
-<li>中国网民总数  = 7亿 = <strong>7 × 10^8 （人）</strong></li>
-<li>假设 电商网站的市场比例 = <strong>30%</strong></li>
-</ul>
-<p><strong>则 ① 电商用户总数 = 7 × 10^8 × 30% = 2.1 × 10^8 （人）</strong></p>
-</li>
-<li><p>一位电商用户一年买书的数量？<br>② 一位电商用户一年买书的数量 = 一位电商用户一月买书的数量 × <strong>12</strong> （月）</p>
-<ul>
-<li>假设平均每人每月买<strong>0.5</strong>本，即两个月买一本（因为现在人们很少买书了╮(╯▽╰)╭）</li>
-</ul>
-<p><strong>则 ② 书数量（本/人/年）= 书数量（本/人/月）× 12（月/年）= 0.5 × 12 = 6（本/人/年）</strong></p>
-</li>
-<li><p>单位时间 = <strong>1</strong> 年</p>
-</li>
-</ol>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>结合 ①②： 书总数量（本）= 用户总数（人）× 书数量（本/人/年）× 1（年）</p>
-<p><strong>书总数量（本）= 2.1 × 10^8 × 6 × 1 = 1.26 × 10^9 （本）</strong><br><strong>即：电商一年大约卖12.6亿本书。</strong></p>
-<hr>
-<h2 id="第二种举例：美国有多少加油站？"><a href="#第二种举例：美国有多少加油站？" class="headerlink" title="第二种举例：美国有多少加油站？"></a>第二种举例：美国有多少加油站？</h2><h3 id="公式：加油站总数（个）-①（单位时间内）汽车加油总次数（次）÷-②（单位时间内）每个加油站加油总次数（次-个）"><a href="#公式：加油站总数（个）-①（单位时间内）汽车加油总次数（次）÷-②（单位时间内）每个加油站加油总次数（次-个）" class="headerlink" title="公式：加油站总数（个） = ①（单位时间内）汽车加油总次数（次）÷ ②（单位时间内）每个加油站加油总次数（次/个）"></a>公式：加油站总数（个） = ①（单位时间内）汽车加油总次数（次）÷ ②（单位时间内）每个加油站加油总次数（次/个）</h3><p><em>简单来看，一天24小时中，假设全国汽车总共加油了10次，每个加油站在这天内总共被使用了5次，那么全国有10 ÷ 5 = 2 个加油站。</em></p>
-<h3 id="分步：-1"><a href="#分步：-1" class="headerlink" title="分步："></a>分步：</h3><p><em>以下计算都是在单位时间内，单位时间是10天</em></p>
-<ol>
-<li><p>单位时间内，全国总共加油多少次？<br>① 汽车加油总次数（次）= 加油次数（次/辆）× 汽车总数（辆）</p>
-<ul>
-<li>加油次数（次/辆）：假设一辆车平均10天加一次油。即单位时间 = <strong>10</strong>天，<strong>加油次数 = 1（次/辆/10天）</strong></li>
-<li>汽车总数（辆）<ul>
-<li>以家庭为单位，汽车总数（辆）= 汽车数量（辆/家）× 家庭数量（家）<ul>
-<li>假设每家平均1.5辆车。</li>
-<li>每5人算一个家庭。美国人口约为3亿，则<strong>家庭数量</strong> = 美国人口（人）÷ 5（人/家）= <strong>3 × 10^8 ÷ 5 = 6 × 10^7 （家）</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>则<strong>汽车总数（辆）</strong> = 汽车数量（辆/家）× 家庭数量（家）= 1.5 × 6 × 10^7 = <strong>9 × 10^7（辆）</strong></p>
-<p><strong>所以：① 汽车加油总次数（次）= 加油次数（次/辆）× 汽车总数（辆）= 1 × 9 × 10^7 = 9 × 10^7（次）</strong></p>
-</li>
-</ul>
-</li>
-<li><p>单位时间内，每个加油站加油总次数？<br><em>意思就是，假设一个加油站里有一台加油机，这台加油机每1小时被使用一次，一天有24小时，那么它这天总共被使用了24次。这个加油站也就被使用了24次。<br>注意使用概率：并不是全国所有加油站都有机会被使用。偏远地区使用频率很低。所以这里假设有每个加油站有80%的概率被光顾。</em></p>
-<p>   ② 每个加油站加油总次数（次/个）= 使用概率 × 加油机数量（台/个）× 使用次数（次/台/天）</p>
-<ul>
-<li>假设使用概率为<strong>80%</strong></li>
-<li>假设每个加油站有<strong>6</strong>台加油机。</li>
-<li>假设每3小时一台加油机被使用一次，则一天24小时中这台加油机被使用了<strong>8</strong>次（24/8=3）</li>
-</ul>
-</li>
-</ol>
-<p><strong>所以 ② 每个加油站加油总次数（次/个）= 使用概率 × 加油机数量（台/个）× 使用次数（次/台/天）= 80% × 6 × 8 = 38.4（次/个/天）</strong></p>
-<p><strong>单位时间内，每个加油站加油总次数为38.4 × 10（天）= 384 ≈ 400（次/个）</strong></p>
-<h3 id="结论-1"><a href="#结论-1" class="headerlink" title="结论"></a>结论</h3><p>结合 ①②：加油站总数（个） = ①（单位时间内）汽车加油总次数（次）÷ ②（单位时间内）每个加油站加油总次数（次/个）<br><strong>加油站总数（个）= 9 × 10^7 ÷ 400 = 2.25 × 10^5 = 225,000（个）</strong><br><strong>即：美国大约有22.5万个加油站。</strong><br>​网上查到资料说美国大概有168,000个加油站（2004），数量级是一致的。</p>
+          Reference: market size 估算的一类问题应该怎么思考？ - 林梓默的回答 - 知乎
+分类根据这个回答，分为两种问题。
 
-          
+第一种：问具体数字。电商一年卖多少本书？
+第二种：问服务的次数。北京多少加油站？
+
+
+公式
+第一种问题考虑角度：供应/需求 （Supply/Demand)从需求
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/19/Market-Size-市场估计问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -533,12 +479,18 @@
       
         
           
-            <p>####Create a new post 创建一个新的文章<br><code>$ hexo new &quot;new post&quot;</code></p>
-<p>####View site static 发布前预览<br><code>$ hexo s</code></p>
-<p>####Clean cache file 清理缓存（如果修改了格式）<br><code>$ hexo clean</code></p>
-<p>####Generate and deploy files 发布<br><code>hexo g -d</code></p>
-
-          
+          ####Create a new post 创建一个新的文章$ hexo new &quot;new post&quot;
+####View site static 发布前预览$ hexo s
+####Clean cache file 清理缓存（如果修改了格式）$ hexo clean
+####Ge
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/19/Hexo-Common-Commands/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -678,13 +630,16 @@
       
         
           
-            <p>Reference: <a href="https://www.hackerrank.com/challenges/30-hello-world/tutorial" target="_blank" rel="noopener">Day 0: Hello, World.</a><br>Read from stdin:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure></p>
-<p>Read next:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scan.next(); <span class="comment">// returns the next token of input</span></span><br><span class="line">scan.hasNext(); <span class="comment">// returns true if there is another token of input (false otherwise)</span></span><br><span class="line">scan.nextLine() <span class="comment">// returns the next LINE of input</span></span><br><span class="line">scan.hasNextLine(); <span class="comment">// returns true if there is another line of input</span></span><br></pre></td></tr></table></figure></p>
-<p>When finish reading, close it to avoid a resource leak.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scan.close();</span><br></pre></td></tr></table></figure></p>
-<p>Example<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in); <span class="comment">// open scanner</span></span><br><span class="line">String s = scan.next(); <span class="comment">// read the next token and save it to 's'</span></span><br><span class="line">scan.close(); <span class="comment">// close scanner</span></span><br><span class="line">System.out.println(s); <span class="comment">// print 's' to System.out, followed by a new line</span></span><br></pre></td></tr></table></figure></p>
-<p>​</p>
-
-          
+          Reference: Day 0: Hello, World.Read from stdin:1Scanner scan = new Scanner(System.in);
+Read next:1234scan.next(); // returns the next token of inputsc
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/18/Day0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -802,17 +757,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/18/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -906,10 +859,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -917,10 +870,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
