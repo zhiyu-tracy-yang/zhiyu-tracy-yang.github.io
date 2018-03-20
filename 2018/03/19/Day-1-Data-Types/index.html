@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Reference: Day 0: Hello, World.Read from stdin:1Scanner scan = new Scanner(System.in); Read next:1234scan.next(); // returns the next token of inputscan.hasNext(); // returns true if there is another">
+<meta name="description" content="What I have learned:1. Different data type uses different reading methods.123int a = scan.nextInt();         //read next intdouble b = scan.nextDouble();   //read next doubleString c = scan.nextLine()">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scanner Class in Java">
-<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/03/18/Day0/index.html">
+<meta property="og:title" content="Day 1: Data Types">
+<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/03/19/Day-1-Data-Types/index.html">
 <meta property="og:site_name" content="Tracy Yang">
-<meta property="og:description" content="Reference: Day 0: Hello, World.Read from stdin:1Scanner scan = new Scanner(System.in); Read next:1234scan.next(); // returns the next token of inputscan.hasNext(); // returns true if there is another">
+<meta property="og:description" content="What I have learned:1. Different data type uses different reading methods.123int a = scan.nextInt();         //read next intdouble b = scan.nextDouble();   //read next doubleString c = scan.nextLine()">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-19T19:04:16.000Z">
+<meta property="og:updated_time" content="2018-03-20T10:56:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scanner Class in Java">
-<meta name="twitter:description" content="Reference: Day 0: Hello, World.Read from stdin:1Scanner scan = new Scanner(System.in); Read next:1234scan.next(); // returns the next token of inputscan.hasNext(); // returns true if there is another">
+<meta name="twitter:title" content="Day 1: Data Types">
+<meta name="twitter:description" content="What I have learned:1. Different data type uses different reading methods.123int a = scan.nextInt();         //read next intdouble b = scan.nextDouble();   //read next doubleString c = scan.nextLine()">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2018/03/18/Day0/"/>
+  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2018/03/19/Day-1-Data-Types/"/>
 
 
 
 
 
-  <title>Scanner Class in Java | Tracy Yang</title>
+  <title>Day 1: Data Types | Tracy Yang</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2018/03/18/Day0/">
+    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2018/03/19/Day-1-Data-Types/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tracy Yang">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Scanner Class in Java</h1>
+          <h1 class="post-title" itemprop="name headline">Day 1: Data Types</h1>
         
 
         <div class="post-meta">
@@ -316,16 +316,28 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-18T20:21:04+00:00">
-                2018-03-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-19T20:52:18+00:00">
+                2018-03-19
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post updated&#58;</span>
+              
+              <time title="Post updated" itemprop="dateModified" datetime="2018-03-20T10:56:22+00:00">
+                2018-03-20
+              </time>
+            
           </span>
-
+          
           
             <span class="post-category" >
             
@@ -370,7 +382,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  118
+                  328
                 </span>
               
 
@@ -386,7 +398,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -407,11 +419,19 @@
       
 
       
-        <p>Reference: <a href="https://www.hackerrank.com/challenges/30-hello-world/tutorial" target="_blank" rel="noopener">Day 0: Hello, World.</a><br>Read from stdin:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure></p>
-<p>Read next:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scan.next(); <span class="comment">// returns the next token of input</span></span><br><span class="line">scan.hasNext(); <span class="comment">// returns true if there is another token of input (false otherwise)</span></span><br><span class="line">scan.nextLine() <span class="comment">// returns the next LINE of input</span></span><br><span class="line">scan.hasNextLine(); <span class="comment">// returns true if there is another line of input</span></span><br></pre></td></tr></table></figure></p>
-<p>When finish reading, close it to avoid a resource leak.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scan.close();</span><br></pre></td></tr></table></figure></p>
-<p>Example<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in); <span class="comment">// open scanner</span></span><br><span class="line">String s = scan.next(); <span class="comment">// read the next token and save it to 's'</span></span><br><span class="line">scan.close(); <span class="comment">// close scanner</span></span><br><span class="line">System.out.println(s); <span class="comment">// print 's' to System.out, followed by a new line</span></span><br></pre></td></tr></table></figure></p>
-<p>​</p>
+        <h1 id="What-I-have-learned"><a href="#What-I-have-learned" class="headerlink" title="What I have learned:"></a>What I have learned:</h1><h2 id="1-Different-data-type-uses-different-reading-methods"><a href="#1-Different-data-type-uses-different-reading-methods" class="headerlink" title="1. Different data type uses different reading methods."></a>1. Different data type uses different reading methods.</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = scan.nextInt();         <span class="comment">//read next int</span></span><br><span class="line"><span class="keyword">double</span> b = scan.nextDouble();   <span class="comment">//read next double</span></span><br><span class="line">String c = scan.nextLine();     <span class="comment">//read next line as String</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-nextInt-nextDouble-methods-do-not-consume-n"><a href="#2-nextInt-nextDouble-methods-do-not-consume-n" class="headerlink" title="2. nextInt(), nextDouble() methods do not consume \n"></a>2. nextInt(), nextDouble() methods do not consume \n</h2><p>For example (This does not work.)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">double</span> d = <span class="number">4.0</span>;</span><br><span class="line">String s = <span class="string">"HackerRank "</span>;</span><br><span class="line"></span><br><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="comment">/* Read and save an integer, double, and String to your variables.*/</span></span><br><span class="line"><span class="keyword">int</span> a = scan.nextInt();</span><br><span class="line"><span class="keyword">double</span> b = scan.nextDouble();</span><br><span class="line">String c = scan.nextLine();</span><br><span class="line"></span><br><span class="line">System.out.println(a + i);</span><br><span class="line">System.out.println(b + d);</span><br><span class="line">System.out.println(s + c);  <span class="comment">//only print s</span></span><br></pre></td></tr></table></figure></p>
+<p>Input:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">5.0</span><br><span class="line">test</span><br></pre></td></tr></table></figure></p>
+<p>Output:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">9.0</span><br></pre></td></tr></table></figure></p>
+<p><strong>It is not able to reach the string input. Because nextInt(); reads the integer, but not the “\n”. Then nextLine() reads “\n”, and treats it as the input for c.</strong><br>The input with \n is<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5\n</span><br><span class="line">5.0\n</span><br><span class="line">test\n</span><br></pre></td></tr></table></figure></p>
+<p><strong>因为nextInt()读入一个整数，但是不会读入这个整数后面的换行符\n。而这时nextLine()开始读，读到了换行符，这个换行符是之前那个整数后面的换行符。nextLine()继续这一行，发现换行符后面没东西了，所以返回了换行而已，并没有接下去读“test”。</strong><br>Solution:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Now each read consumes \n</span></span><br><span class="line"><span class="keyword">int</span> a = Integer.parseInt(scan.nextLine());</span><br><span class="line"><span class="keyword">double</span> b = Double.parseDouble(scan.nextLine());</span><br><span class="line">String c = scan.nextLine();</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
+<li>Different data type uses different reading methods.</li>
+<li>nextInt(), nextDouble() do not consume \n.</li>
+</ol>
+<hr>
+<p>Reference:<br><a href="https://stackoverflow.com/a/13102066" target="_blank" rel="noopener">Scanner is skipping nextLine() after using next() or nextFoo()?</a><br><a href="https://www.hackerrank.com/challenges/30-data-types/problem" target="_blank" rel="noopener">Day 1: Data Types</a></p>
 
       
     </div>
@@ -452,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/18/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/03/19/Market-Size-市场估计问题/" rel="next" title="Market Size 市场估计问题">
+                <i class="fa fa-chevron-left"></i> Market Size 市场估计问题
               </a>
             
           </div>
@@ -462,8 +482,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/19/Hexo-Common-Commands/" rel="prev" title="Hexo Common Commands">
-                Hexo Common Commands <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/20/Day-2-Operators/" rel="prev" title="Day 2: Operators">
+                Day 2: Operators <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -516,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,7 +565,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -581,6 +610,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-I-have-learned"><span class="nav-number">1.</span> <span class="nav-text">What I have learned:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Different-data-type-uses-different-reading-methods"><span class="nav-number">1.1.</span> <span class="nav-text">1. Different data type uses different reading methods.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-nextInt-nextDouble-methods-do-not-consume-n"><span class="nav-number">1.2.</span> <span class="nav-text">2. nextInt(), nextDouble() methods do not consume \n</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">2.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
