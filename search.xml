@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[Day 2: Operators]]></title>
     <url>%2F2018%2F03%2F20%2FDay-2-Operators%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[What I have learnd: Math.round()Math.round() returns a double123double percent = (tip_percent + tax_percent)/100.0;int total = (int)Math.round(meal_cost * (1 + percent));System.out.println("The total meal cost is " + total + " dollars."); To Do: Round to 2 decimals In other languages]]></content>
+      <categories>
+        <category>30 Days of Code</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Day 1: Data Types]]></title>
