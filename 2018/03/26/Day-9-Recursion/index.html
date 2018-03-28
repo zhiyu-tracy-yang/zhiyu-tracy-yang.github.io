@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,30 Days of Code," />
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="This my blog for coding and consulting case studies.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tracy Yang">
-<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/categories/Reading/index.html">
+<meta name="description" content="Review recursion in Java with examples.">
+<meta name="keywords" content="java,30 Days of Code">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 9: Recursion">
+<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/03/26/Day-9-Recursion/index.html">
 <meta property="og:site_name" content="Tracy Yang">
-<meta property="og:description" content="This my blog for coding and consulting case studies.">
+<meta property="og:description" content="Review recursion in Java with examples.">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/reverseStringRecursive.jpeg">
+<meta property="og:updated_time" content="2018-03-28T11:48:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tracy Yang">
-<meta name="twitter:description" content="This my blog for coding and consulting case studies.">
+<meta name="twitter:title" content="Day 9: Recursion">
+<meta name="twitter:description" content="Review recursion in Java with examples.">
+<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/reverseStringRecursive.jpeg">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/categories/Reading/"/>
+  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2018/03/26/Day-9-Recursion/"/>
 
 
 
 
 
-  <title>Category: Reading | Tracy Yang</title>
+  <title>Day 9: Recursion | Tracy Yang</title>
   
 
 
@@ -143,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,55 +275,240 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Reading<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2018/03/26/Day-9-Recursion/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tracy Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tracy Yang">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/25/jd-s1c1/" itemprop="url">
-              
-                <span itemprop="name">读书笔记：《创京东》第一部分 柜台起家</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Day 9: Recursion</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-25T23:46:18+01:00"
-              content="2018-03-25" >
-          03-25
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T11:02:57+01:00">
+                2018-03-26
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post updated&#58;</span>
+              
+              <time title="Post updated" itemprop="dateModified" datetime="2018-03-28T12:48:34+01:00">
+                2018-03-28
+              </time>
+            
+          </span>
+          
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index">
+                    <span itemprop="name">Coding</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  322
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Review recursion in Java with examples.<br><a id="more"></a><br>Recursion is a method that calls itself. The key points to use a recursion is to identify the base case and the recursive case.</p>
+<h1 id="Common-Example"><a href="#Common-Example" class="headerlink" title="Common Example"></a>Common Example</h1><h2 id="Factorial"><a href="#Factorial" class="headerlink" title="Factorial"></a>Factorial</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Calculate N!</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="comment">//this is the base case</span></span><br><span class="line">      <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">return</span> n*factorial(n-<span class="number">1</span>); <span class="comment">//this is the recursive case</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">input: 3</span><br><span class="line">output: 6 (1*2*3)</span><br></pre></td></tr></table></figure>
+<h2 id="Fibonacci"><a href="#Fibonacci" class="headerlink" title="Fibonacci"></a>Fibonacci</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="comment">//two base cases</span></span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//recursive case</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Bunny-Ears"><a href="#Bunny-Ears" class="headerlink" title="Bunny Ears"></a>Bunny Ears</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">bunnyEars2</span><span class="params">(<span class="keyword">int</span> bunnies)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(bunnies == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span>(bunnies == <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">if</span>(bunnies %<span class="number">2</span> == <span class="number">0</span>) <span class="comment">//even</span></span><br><span class="line">    <span class="keyword">return</span> bunnyEars2(bunnies -<span class="number">1</span> ) + <span class="number">3</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> bunnyEars2(bunnies - <span class="number">1</span>) + <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="等差数列-Arithmetic-Progression"><a href="#等差数列-Arithmetic-Progression" class="headerlink" title="等差数列 Arithmetic Progression"></a>等差数列 Arithmetic Progression</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">triangle</span><span class="params">(<span class="keyword">int</span> rows)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(rows == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span>(rows == <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> triangle(rows-<span class="number">1</span>) + rows;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Sum-of-each-digit-各个位数之和"><a href="#Sum-of-each-digit-各个位数之和" class="headerlink" title="Sum of each digit 各个位数之和"></a>Sum of each digit 各个位数之和</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumDigits</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt; <span class="number">10</span>)</span><br><span class="line">      <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">return</span> n%<span class="number">10</span> + sumDigits(n/<span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Reverse-a-string"><a href="#Reverse-a-string" class="headerlink" title="Reverse a string"></a>Reverse a string</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">reverse</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="keyword">null</span> == str) || (str.length() &lt;= <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> reverse(str.substring(<span class="number">1</span>)) + str.charAt(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/reverseStringRecursive.jpeg" alt="reverse String with recursion"></p>
+<h3 id="Two-Methods-of-String"><a href="#Two-Methods-of-String" class="headerlink" title="Two Methods of String"></a>Two Methods of String</h3><ol>
+<li>substring(int beginIndex)<br> Returns a new string that is a substring of this string.</li>
+<li>charAt(int index)<br> Returns the char value at the specified index.</li>
+<li>Examples <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String input = <span class="string">"String"</span>;</span><br><span class="line">System.out.println(input.substring(<span class="number">1</span>)); <span class="comment">//tring</span></span><br><span class="line">System.out.println(input.charAt(<span class="number">0</span>)); <span class="comment">//S</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h1><p><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank" rel="noopener">Class String</a><br><a href="https://stackoverflow.com/questions/9723912/reversing-a-string-with-recursion-in-java" target="_blank" rel="noopener">Reversing a String with Recursion in Java</a></p>
 
       
     </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #666666;font-size:14px;">-------------Thanks for reading-------------</div>
+    
+</div>
 
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/30-Days-of-Code/" rel="tag"># 30 Days of Code</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/25/jd-s1c1/" rel="next" title="读书笔记：《创京东》第一部分 柜台起家">
+                <i class="fa fa-chevron-left"></i> 读书笔记：《创京东》第一部分 柜台起家
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -327,6 +516,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -347,8 +540,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -412,6 +614,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Common-Example"><span class="nav-number">1.</span> <span class="nav-text">Common Example</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Factorial"><span class="nav-number">1.1.</span> <span class="nav-text">Factorial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fibonacci"><span class="nav-number">1.2.</span> <span class="nav-text">Fibonacci</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bunny-Ears"><span class="nav-number">1.3.</span> <span class="nav-text">Bunny Ears</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等差数列-Arithmetic-Progression"><span class="nav-number">1.4.</span> <span class="nav-text">等差数列 Arithmetic Progression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sum-of-each-digit-各个位数之和"><span class="nav-number">1.5.</span> <span class="nav-text">Sum of each digit 各个位数之和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverse-a-string"><span class="nav-number">1.6.</span> <span class="nav-text">Reverse a string</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Two-Methods-of-String"><span class="nav-number">1.6.1.</span> <span class="nav-text">Two Methods of String</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">2.</span> <span class="nav-text">References:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -550,6 +768,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
