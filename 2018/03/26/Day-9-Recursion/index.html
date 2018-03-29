@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="Tracy Yang">
 <meta property="og:description" content="Review recursion in Java with examples.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/reverseStringRecursive.jpeg">
-<meta property="og:updated_time" content="2018-03-28T11:48:34.000Z">
+<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/reverseStringRecursive.jpeg">
+<meta property="og:updated_time" content="2018-03-29T13:03:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day 9: Recursion">
 <meta name="twitter:description" content="Review recursion in Java with examples.">
-<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/reverseStringRecursive.jpeg">
+<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/reverseStringRecursive.jpeg">
 
 
 
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2018-03-28T12:48:34+01:00">
-                2018-03-28
+              <time title="Post updated" itemprop="dateModified" datetime="2018-03-29T14:03:14+01:00">
+                2018-03-29
               </time>
             
           </span>
@@ -429,7 +429,7 @@
 <h2 id="等差数列-Arithmetic-Progression"><a href="#等差数列-Arithmetic-Progression" class="headerlink" title="等差数列 Arithmetic Progression"></a>等差数列 Arithmetic Progression</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">triangle</span><span class="params">(<span class="keyword">int</span> rows)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(rows == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span>(rows == <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> triangle(rows-<span class="number">1</span>) + rows;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Sum-of-each-digit-各个位数之和"><a href="#Sum-of-each-digit-各个位数之和" class="headerlink" title="Sum of each digit 各个位数之和"></a>Sum of each digit 各个位数之和</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumDigits</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt; <span class="number">10</span>)</span><br><span class="line">      <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">return</span> n%<span class="number">10</span> + sumDigits(n/<span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Reverse-a-string"><a href="#Reverse-a-string" class="headerlink" title="Reverse a string"></a>Reverse a string</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">reverse</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="keyword">null</span> == str) || (str.length() &lt;= <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> reverse(str.substring(<span class="number">1</span>)) + str.charAt(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/reverseStringRecursive.jpeg" alt="reverse String with recursion"></p>
+<p><img src="/images/in-post/reverseStringRecursive.jpeg" alt="reverse String with recursion"></p>
 <h3 id="Two-Methods-of-String"><a href="#Two-Methods-of-String" class="headerlink" title="Two Methods of String"></a>Two Methods of String</h3><ol>
 <li>substring(int beginIndex)<br> Returns a new string that is a substring of this string.</li>
 <li>charAt(int index)<br> Returns the char value at the specified index.</li>
@@ -480,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/25/jd-s1c1/" rel="next" title="读书笔记：《创京东》第一部分 柜台起家">
-                <i class="fa fa-chevron-left"></i> 读书笔记：《创京东》第一部分 柜台起家
+              <a href="/2018/03/25/jd-s1c1/" rel="next" title="读书笔记：《创京东》第一部分 第一章 柜台起家">
+                <i class="fa fa-chevron-left"></i> 读书笔记：《创京东》第一部分 第一章 柜台起家
               </a>
             
           </div>
@@ -573,7 +573,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
