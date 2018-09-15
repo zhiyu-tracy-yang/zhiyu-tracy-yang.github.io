@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next gemini use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -98,7 +98,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -370,6 +370,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> Article viewed
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -597,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -607,7 +621,7 @@
                 alt="Zhiyu (Tracy) Yang" />
             
               <p class="site-author-name" itemprop="name">Zhiyu (Tracy) Yang</p>
-              <p class="site-description motion-element" itemprop="description">This my blog for coding and business studies :)</p>
+              <p class="site-description motion-element" itemprop="description">Someday, somewhere.</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -659,6 +673,12 @@
                   </span>
                 
                   <span class="links-of-author-item">
+                    <a href="mailto:zy17630@my.bristol.ac.uk" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
                     <a href="https://www.facebook.com/tracy7yang" target="_blank" title="FB Page">
                       
                         <i class="fa fa-fw fa-facebook"></i>FB Page</a>
@@ -685,6 +705,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-1-Values-Types-and-Operators"><span class="nav-text">Chapter 1 Values, Types, and Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Exponent-add-an-e"><span class="nav-text">1.1 Exponent: add an e</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-backslash"><span class="nav-text">1.2 backslash ()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-template-literals"><span class="nav-text">1.3 ${} template literals</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-typeof"><span class="nav-text">1.4 typeof</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Logical-Operators"><span class="nav-text">1.5 Logical Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Ternary-Operator-Conditional-Operator"><span class="nav-text">1.6 Ternary Operator / Conditional Operator</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-2-Program-Structure"><span class="nav-text">Chapter 2 Program Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Breaking-out-of-a-loop"><span class="nav-text">2.1 Breaking out of a loop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Switch-Statements"><span class="nav-text">2.2 Switch Statements</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-3-Functions"><span class="nav-text">Chapter 3 Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Arrow-Functions"><span class="nav-text">3.1 Arrow Functions</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Data-Structures-Objects-and-Arrays"><span class="nav-text">Chapter 4 Data Structures: Objects and Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Define-Arrays"><span class="nav-text">4.1 Define Arrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Properties"><span class="nav-text">4.2 Properties</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-Some-methods-of-string-and-array-objects"><span class="nav-text">4.3 Some methods of string and array objects</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-1-length"><span class="nav-text">4.3.1 length</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-2-toUpperCase-toLowerCase"><span class="nav-text">4.3.2 toUpperCase, toLowerCase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-3-Push-in-Arrays"><span class="nav-text">4.3.3 Push in Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-4-shift-unshift"><span class="nav-text">4.3.4 shift, unshift</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-5-indexOf-lastIndexOf"><span class="nav-text">4.3.5 indexOf, lastIndexOf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-6-slice"><span class="nav-text">4.3.6 slice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-7-trim"><span class="nav-text">4.3.7 trim()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-8-split-join"><span class="nav-text">4.3.8 split, join</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-9-repeat"><span class="nav-text">4.3.9 repeat</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-Objects"><span class="nav-text">4.4 Objects</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-1-delete-in"><span class="nav-text">4.4.1 delete, in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-2-Object-assign"><span class="nav-text">4.4.2 Object.assign()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-Rest-parameters"><span class="nav-text">4.5 Rest parameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-JSON"><span class="nav-text">4.6 JSON</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Refernce"><span class="nav-text">Refernce</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -709,13 +745,14 @@
   
 </div>
 
+<!--
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   You are the No. <span id="busuanzi_value_site_pv"></span> visitor.
 </span>
 
 </div>
-
+-->
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i><span class="post-count">Total Word Count: 15.0k words.</span>
@@ -734,6 +771,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>You are the No.
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      visitor.
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>Total visited
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times.
+    </span>
+  
+</div>
+
 
 
 
@@ -827,6 +884,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>

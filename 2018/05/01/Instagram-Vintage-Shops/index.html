@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next gemini use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -98,7 +98,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -370,6 +370,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> Article viewed
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -546,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,7 +570,7 @@
                 alt="Zhiyu (Tracy) Yang" />
             
               <p class="site-author-name" itemprop="name">Zhiyu (Tracy) Yang</p>
-              <p class="site-description motion-element" itemprop="description">This my blog for coding and business studies :)</p>
+              <p class="site-description motion-element" itemprop="description">Someday, somewhere.</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -608,6 +622,12 @@
                   </span>
                 
                   <span class="links-of-author-item">
+                    <a href="mailto:zy17630@my.bristol.ac.uk" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
                     <a href="https://www.facebook.com/tracy7yang" target="_blank" title="FB Page">
                       
                         <i class="fa fa-fw fa-facebook"></i>FB Page</a>
@@ -634,6 +654,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-vintage-clothes"><span class="nav-text">Why vintage clothes?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Individuality"><span class="nav-text">Individuality</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Costs"><span class="nav-text">Costs</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-Instagram"><span class="nav-text">Why Instagram?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fashion"><span class="nav-text">Fashion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interests-Feed"><span class="nav-text">Interests Feed</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -658,13 +694,14 @@
   
 </div>
 
+<!--
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   You are the No. <span id="busuanzi_value_site_pv"></span> visitor.
 </span>
 
 </div>
-
+-->
 <div class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i><span class="post-count">Total Word Count: 15.0k words.</span>
@@ -683,6 +720,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>You are the No.
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      visitor.
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>Total visited
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      times.
+    </span>
+  
+</div>
+
 
 
 
@@ -776,6 +833,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
