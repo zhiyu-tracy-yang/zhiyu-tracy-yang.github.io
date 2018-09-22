@@ -87,10 +87,13 @@
 <meta property="og:site_name" content="The Tracy Yang Journal">
 <meta property="og:description" content="总结SQL常用语法和知识点">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-22T20:03:49.000Z">
+<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/sql-3-1-1.png">
+<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/sql-3-1-2.png">
+<meta property="og:updated_time" content="2018-09-22T21:06:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL总结（持更）">
 <meta name="twitter:description" content="总结SQL常用语法和知识点">
+<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/sql-3-1-1.png">
 
 
 
@@ -342,7 +345,7 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2018-09-22T21:03:49+01:00">
+              <time title="Post updated" itemprop="dateModified" datetime="2018-09-22T22:06:37+01:00">
                 2018-09-22
               </time>
             
@@ -397,7 +400,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  484
+                  603
                 </span>
               
 
@@ -413,7 +416,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  3
                 </span>
               
             </div>
@@ -435,13 +438,18 @@
 
       
         <p>总结SQL常用语法和知识点<br><a id="more"></a></p>
-<h1 id="1-基本"><a href="#1-基本" class="headerlink" title="1. 基本"></a>1. 基本</h1><h2 id="1-1-命名规则"><a href="#1-1-命名规则" class="headerlink" title="1.1 命名规则"></a>1.1 命名规则</h2><ul>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
+<li>命名规则<ol>
 <li>只能使用半角英文字母、数字、下划线(_)作为数据库、表和列的名称</li>
 <li>名称必须以半角英文字母作为开头</li>
 <li>名称不能重复</li>
-</ul>
-<h2 id="1-2-数据类型"><a href="#1-2-数据类型" class="headerlink" title="1.2 数据类型"></a>1.2 数据类型</h2><p><strong><font color="#dd0000">所有的列都必须指定数据类型</font></strong></p>
-<ul>
+</ol>
+</li>
+<li>所有的列都必须指定数据类型</li>
+<li>表格删除（drop table）后不能恢复</li>
+<li>表格修改（alter table）后不能恢复</li>
+</ol>
+<h1 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
 <li>数字型<ul>
 <li>INTEGER型</li>
 </ul>
@@ -462,7 +470,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-3-约束-constrain"><a href="#1-3-约束-constrain" class="headerlink" title="1.3 约束 (constrain)"></a>1.3 约束 (constrain)</h2><ul>
+<h2 id="约束-constrain"><a href="#约束-constrain" class="headerlink" title="约束 (constrain)"></a>约束 (constrain)</h2><ul>
 <li><p>NOT NULL约束：</p>
   <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">product_id      char(4)         not null,</span><br></pre></td></tr></table></figure>
 </li>
@@ -470,15 +478,18 @@
   <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PRIMARY KEY (product_id)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="1-4-数据库的创建-CREATE-DATABASE语句"><a href="#1-4-数据库的创建-CREATE-DATABASE语句" class="headerlink" title="1.4 数据库的创建(CREATE DATABASE语句)"></a>1.4 数据库的创建(CREATE DATABASE语句)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> &lt;数据库名称&gt;;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> shop; <span class="comment">--将数据库命名为 shop</span></span><br></pre></td></tr></table></figure>
-<h2 id="1-5-表的创建-CREATE-TABLE语句"><a href="#1-5-表的创建-CREATE-TABLE语句" class="headerlink" title="1.5 表的创建(CREATE TABLE语句)"></a>1.5 表的创建(CREATE TABLE语句)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &lt;表名&gt;</span><br><span class="line">(</span><br><span class="line">    &lt;列名<span class="number">1</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;，</span><br><span class="line">    &lt;列名<span class="number">2</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;， </span><br><span class="line">    &lt;列名<span class="number">3</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;， </span><br><span class="line">    &lt;列名<span class="number">4</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;，&lt;该表的约束<span class="number">1</span>&gt;， &lt;该表的约束<span class="number">2</span>&gt;，......</span><br><span class="line">);</span><br><span class="line"><span class="comment">--举例</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> Product</span><br><span class="line">(</span><br><span class="line">  product_id      <span class="built_in">char</span>(<span class="number">4</span>)         <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  product_name    <span class="built_in">varchar</span>(<span class="number">100</span>)    <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  sale_price      <span class="built_in">integer</span>         ,</span><br><span class="line">  purchase_price  <span class="built_in">integer</span>         ,</span><br><span class="line">  regist_date     <span class="built_in">date</span>            ,</span><br><span class="line">  primary <span class="keyword">key</span> (product_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h2 id="1-6-表的删除-DROP-TABLE语句"><a href="#1-6-表的删除-DROP-TABLE语句" class="headerlink" title="1.6 表的删除(DROP TABLE语句)"></a>1.6 表的删除(DROP TABLE语句)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> &lt;表名&gt;;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> Product; <span class="comment">--删除Product表格</span></span><br></pre></td></tr></table></figure>
-<p><strong><font color="#dd0000">删除后无法恢复</font></strong></p>
-<h2 id="1-7-表定义的更新-ALTER-TABLE语句"><a href="#1-7-表定义的更新-ALTER-TABLE语句" class="headerlink" title="1.7 表定义的更新(ALTER TABLE语句)"></a>1.7 表定义的更新(ALTER TABLE语句)</h2><h3 id="1-7-1-添加列的ALTER-TABLE语句"><a href="#1-7-1-添加列的ALTER-TABLE语句" class="headerlink" title="1.7.1 添加列的ALTER TABLE语句"></a>1.7.1 添加列的ALTER TABLE语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> &lt;列的定义&gt;;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> Product <span class="keyword">add</span> <span class="keyword">column</span> product_name_pinyin <span class="built_in">varchar</span>(<span class="number">100</span>); <span class="comment">--添加商品名称(拼音)列</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-7-2-删除列的ALTER-TABLE语句"><a href="#1-7-2-删除列的ALTER-TABLE语句" class="headerlink" title="1.7.2 删除列的ALTER TABLE语句"></a>1.7.2 删除列的ALTER TABLE语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> &lt;列名&gt;;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> Product <span class="keyword">drop</span> <span class="keyword">column</span> product_name_pinyin; <span class="comment">--删除商品名称(拼音)列</span></span><br></pre></td></tr></table></figure>
-<p><strong><font color="#dd0000">修改后无法恢复</font></strong></p>
-<h2 id="1-8-变更表名"><a href="#1-8-变更表名" class="headerlink" title="1.8 变更表名"></a>1.8 变更表名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Poduct <span class="keyword">RENAME</span> <span class="keyword">TO</span> Product; <span class="comment">-- Oracle and PostgreSQL</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据库的创建-CREATE-DATABASE语句"><a href="#数据库的创建-CREATE-DATABASE语句" class="headerlink" title="数据库的创建(CREATE DATABASE语句)"></a>数据库的创建(CREATE DATABASE语句)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> &lt;数据库名称&gt;;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> shop; <span class="comment">--将数据库命名为 shop</span></span><br></pre></td></tr></table></figure>
+<h2 id="表的创建-CREATE-TABLE语句"><a href="#表的创建-CREATE-TABLE语句" class="headerlink" title="表的创建(CREATE TABLE语句)"></a>表的创建(CREATE TABLE语句)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &lt;表名&gt;</span><br><span class="line">(</span><br><span class="line">    &lt;列名<span class="number">1</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;，</span><br><span class="line">    &lt;列名<span class="number">2</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;， </span><br><span class="line">    &lt;列名<span class="number">3</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;， </span><br><span class="line">    &lt;列名<span class="number">4</span>&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;，&lt;该表的约束<span class="number">1</span>&gt;， &lt;该表的约束<span class="number">2</span>&gt;，......</span><br><span class="line">);</span><br><span class="line"><span class="comment">--举例</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> Product</span><br><span class="line">(</span><br><span class="line">  product_id      <span class="built_in">char</span>(<span class="number">4</span>)         <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  product_name    <span class="built_in">varchar</span>(<span class="number">100</span>)    <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">  sale_price      <span class="built_in">integer</span>         ,</span><br><span class="line">  purchase_price  <span class="built_in">integer</span>         ,</span><br><span class="line">  regist_date     <span class="built_in">date</span>            ,</span><br><span class="line">  primary <span class="keyword">key</span> (product_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="表的删除-DROP-TABLE语句"><a href="#表的删除-DROP-TABLE语句" class="headerlink" title="表的删除(DROP TABLE语句)"></a>表的删除(DROP TABLE语句)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> &lt;表名&gt;;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> Product; <span class="comment">--删除Product表格</span></span><br></pre></td></tr></table></figure>
+<h2 id="表定义的更新-ALTER-TABLE语句"><a href="#表定义的更新-ALTER-TABLE语句" class="headerlink" title="表定义的更新(ALTER TABLE语句)"></a>表定义的更新(ALTER TABLE语句)</h2><h3 id="添加列的ALTER-TABLE语句"><a href="#添加列的ALTER-TABLE语句" class="headerlink" title="添加列的ALTER TABLE语句"></a>添加列的ALTER TABLE语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> &lt;列的定义&gt;;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> Product <span class="keyword">add</span> <span class="keyword">column</span> product_name_pinyin <span class="built_in">varchar</span>(<span class="number">100</span>); <span class="comment">--添加商品名称(拼音)列</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除列的ALTER-TABLE语句"><a href="#删除列的ALTER-TABLE语句" class="headerlink" title="删除列的ALTER TABLE语句"></a>删除列的ALTER TABLE语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> &lt;列名&gt;;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> Product <span class="keyword">drop</span> <span class="keyword">column</span> product_name_pinyin; <span class="comment">--删除商品名称(拼音)列</span></span><br></pre></td></tr></table></figure>
+<h2 id="变更表名"><a href="#变更表名" class="headerlink" title="变更表名"></a>变更表名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Poduct <span class="keyword">RENAME</span> <span class="keyword">TO</span> Product; <span class="comment">-- Oracle and PostgreSQL</span></span><br></pre></td></tr></table></figure>
 <p>通常用rename &lt;变更前名称&gt; &lt;变更后名称&gt;，但是不同数据库语法不同。</p>
+<h2 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- SQL Server &amp; PostgreSQL 插入数据</span></span><br><span class="line"><span class="keyword">Begin</span> <span class="keyword">transaction</span>; <span class="comment">-- 开始插入行的指令语句（看数据库语言而定）</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Product <span class="keyword">values</span> (<span class="string">'0001'</span>, <span class="string">'T-shirt'</span>, <span class="string">'Clothing'</span>, <span class="number">1000</span>, <span class="number">500</span>, <span class="string">'2009-09-20'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Product <span class="keyword">values</span> (<span class="string">'0006'</span>, <span class="string">'叉子'</span>, <span class="string">'厨房用具'</span>, <span class="number">500</span>, <span class="literal">null</span>, <span class="string">'2009-09-20'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">commit</span>; <span class="comment">-- 确定插入行的指令语句</span></span><br></pre></td></tr></table></figure>
+<h1 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h1><h2 id="SELECT-语句基础"><a href="#SELECT-语句基础" class="headerlink" title="SELECT 语句基础"></a>SELECT 语句基础</h2><h3 id="查询部分"><a href="#查询部分" class="headerlink" title="查询部分"></a>查询部分</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> &lt;列名&gt;，...... <span class="keyword">FROM</span> &lt;表名&gt;;</span><br><span class="line"><span class="keyword">select</span> product_id, product_name, purchase_price <span class="keyword">from</span> product;</span><br></pre></td></tr></table></figure>
+<p>执行结果<br><img src="/images/in-post/sql-3-1-1.png" alt="sql-3-1-1"></p>
+<h3 id="查询全部"><a href="#查询全部" class="headerlink" title="查询全部"></a>查询全部</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> &lt;表名&gt;;</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> Product;</span><br></pre></td></tr></table></figure>
+<p>执行结果<br><img src="/images/in-post/sql-3-1-2.png" alt="sql-3-1-2"></p>
 
       
     </div>
@@ -709,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-基本"><span class="nav-text">1. 基本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-命名规则"><span class="nav-text">1.1 命名规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-数据类型"><span class="nav-text">1.2 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-约束-constrain"><span class="nav-text">1.3 约束 (constrain)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-数据库的创建-CREATE-DATABASE语句"><span class="nav-text">1.4 数据库的创建(CREATE DATABASE语句)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-表的创建-CREATE-TABLE语句"><span class="nav-text">1.5 表的创建(CREATE TABLE语句)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-表的删除-DROP-TABLE语句"><span class="nav-text">1.6 表的删除(DROP TABLE语句)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-表定义的更新-ALTER-TABLE语句"><span class="nav-text">1.7 表定义的更新(ALTER TABLE语句)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-1-添加列的ALTER-TABLE语句"><span class="nav-text">1.7.1 添加列的ALTER TABLE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-2-删除列的ALTER-TABLE语句"><span class="nav-text">1.7.2 删除列的ALTER TABLE语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-变更表名"><span class="nav-text">1.8 变更表名</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注意事项"><span class="nav-number">1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本"><span class="nav-number">2.</span> <span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#约束-constrain"><span class="nav-number">2.2.</span> <span class="nav-text">约束 (constrain)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的创建-CREATE-DATABASE语句"><span class="nav-number">2.3.</span> <span class="nav-text">数据库的创建(CREATE DATABASE语句)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的创建-CREATE-TABLE语句"><span class="nav-number">2.4.</span> <span class="nav-text">表的创建(CREATE TABLE语句)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的删除-DROP-TABLE语句"><span class="nav-number">2.5.</span> <span class="nav-text">表的删除(DROP TABLE语句)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表定义的更新-ALTER-TABLE语句"><span class="nav-number">2.6.</span> <span class="nav-text">表定义的更新(ALTER TABLE语句)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加列的ALTER-TABLE语句"><span class="nav-number">2.6.1.</span> <span class="nav-text">添加列的ALTER TABLE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除列的ALTER-TABLE语句"><span class="nav-number">2.6.2.</span> <span class="nav-text">删除列的ALTER TABLE语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变更表名"><span class="nav-number">2.7.</span> <span class="nav-text">变更表名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加数据"><span class="nav-number">2.8.</span> <span class="nav-text">添加数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询"><span class="nav-number">3.</span> <span class="nav-text">查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SELECT-语句基础"><span class="nav-number">3.1.</span> <span class="nav-text">SELECT 语句基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询部分"><span class="nav-number">3.1.1.</span> <span class="nav-text">查询部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询全部"><span class="nav-number">3.1.2.</span> <span class="nav-text">查询全部</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -750,7 +761,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <i class="fa fa-pencil"></i><span class="post-count">Total Word Count: 16.7k words.</span>
+  <i class="fa fa-pencil"></i><span class="post-count">Total Word Count: 16.8k words.</span>
 </div>
 
 <!--
