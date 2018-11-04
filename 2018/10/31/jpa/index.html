@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="java," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="How to create objects and use them in JavaScript.">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="JPA - Java Persistence APIPersist data - 保存数据的意思Java一般是操作objects，那么如何把objects和数据库联系起来？这就涉及到了ORM - Object Relational Mapping - class name就是tablename，class properties就是columns。ORM不限于Java。在Java中应用ORM需要一些">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript Objects">
-<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/05/10/JavaScript-Objects/index.html">
+<meta property="og:title" content="Hibernate笔记（更新中）">
+<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/10/31/jpa/index.html">
 <meta property="og:site_name" content="The Tracy Yang Journal">
-<meta property="og:description" content="How to create objects and use them in JavaScript.">
+<meta property="og:description" content="JPA - Java Persistence APIPersist data - 保存数据的意思Java一般是操作objects，那么如何把objects和数据库联系起来？这就涉及到了ORM - Object Relational Mapping - class name就是tablename，class properties就是columns。ORM不限于Java。在Java中应用ORM需要一些">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-10T10:47:19.000Z">
+<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/hibernate-theory.jpeg">
+<meta property="og:updated_time" content="2018-11-04T22:23:20.123Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript Objects">
-<meta name="twitter:description" content="How to create objects and use them in JavaScript.">
+<meta name="twitter:title" content="Hibernate笔记（更新中）">
+<meta name="twitter:description" content="JPA - Java Persistence APIPersist data - 保存数据的意思Java一般是操作objects，那么如何把objects和数据库联系起来？这就涉及到了ORM - Object Relational Mapping - class name就是tablename，class properties就是columns。ORM不限于Java。在Java中应用ORM需要一些">
+<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/hibernate-theory.jpeg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2018/05/10/JavaScript-Objects/"/>
+  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2018/10/31/jpa/"/>
 
 
 
 
 
-  <title>JavaScript Objects | The Tracy Yang Journal</title>
+  <title>Hibernate笔记（更新中） | The Tracy Yang Journal</title>
   
 
 
@@ -297,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2018/05/10/JavaScript-Objects/">
+    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2018/10/31/jpa/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhiyu (Tracy) Yang">
@@ -314,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript Objects</h1>
+          <h1 class="post-title" itemprop="name headline">Hibernate笔记（更新中）</h1>
         
 
         <div class="post-meta">
@@ -326,8 +328,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T09:35:45+01:00">
-                2018-05-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-31T21:06:07+00:00">
+                2018-10-31
               </time>
             
 
@@ -342,8 +344,8 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2018-05-10T11:47:19+01:00">
-                2018-05-10
+              <time title="Post updated" itemprop="dateModified" datetime="2018-11-04T22:23:20+00:00">
+                2018-11-04
               </time>
             
           </span>
@@ -397,7 +399,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  427
+                  238
                 </span>
               
 
@@ -413,7 +415,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  1
                 </span>
               
             </div>
@@ -434,14 +436,15 @@
       
 
       
-        <p>How to create objects and use them in JavaScript.<br><a id="more"></a></p>
-<h1 id="Objects-Summary"><a href="#Objects-Summary" class="headerlink" title="Objects Summary"></a>Objects Summary</h1><ul>
-<li>Every JavaScript object has a <strong>prototype property</strong>, which makes inheritance possible in JavaScript.</li>
-<li>The prototype property of an object is where we put methods and properties that we want <strong>other objects to inherit</strong>;</li>
-<li>When a certain method (or property) is called, the search starts in the object itself, and if it cannot be found, the search moves on the object’s prototype. This continues until the method is found: <strong>prototype chain</strong>.</li>
-</ul>
-<p>Below I create an example of adding, finding and deleting students with the Student object.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> student_info_controller = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Create an object</span></span><br><span class="line">    <span class="keyword">let</span> Student = <span class="function"><span class="keyword">function</span>(<span class="params">first_name, year_of_birth, student_id</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.first_name = first_name;</span><br><span class="line">        <span class="keyword">this</span>.year_of_birth = year_of_birth;</span><br><span class="line">        <span class="keyword">this</span>.student_id = student_id;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Create an array to store the information</span></span><br><span class="line">    <span class="keyword">let</span> student_data = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Add a new student</span></span><br><span class="line">        add_student: <span class="function"><span class="keyword">function</span>(<span class="params">new_first_name, new_year_of_birth</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">let</span> new_student, new_id;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//If the array is not empty</span></span><br><span class="line">            <span class="keyword">if</span>(student_data.length &gt; <span class="number">0</span>)</span><br><span class="line">                <span class="comment">//New id is the last one + 1</span></span><br><span class="line">                new_id = student_data[student_data.length - <span class="number">1</span>].student_id + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                new_id = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Create a new student instance</span></span><br><span class="line">            new_student = <span class="keyword">new</span> Student(new_first_name, new_year_of_birth, new_id);</span><br><span class="line">            student_data.push(new_student);</span><br><span class="line">            <span class="keyword">return</span> new_student;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        does_exist_student: <span class="function"><span class="keyword">function</span>(<span class="params">student_name</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; student_data.length; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (student_data[i].first_name === student_name) &#123;</span><br><span class="line">                    <span class="keyword">return</span> student_name + <span class="string">" is in the system."</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> student_name + <span class="string">" is not in this system."</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Return the student id by name. If not found, return -1</span></span><br><span class="line">        find_student_id: <span class="function"><span class="keyword">function</span>(<span class="params">student_name</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; student_data.length; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (student_data[i].first_name === student_name) &#123;</span><br><span class="line">                    <span class="keyword">return</span> student_data[i].student_id;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Delete student by id</span></span><br><span class="line">        delete_student_by_id: <span class="function"><span class="keyword">function</span>(<span class="params">student_id</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">let</span> ids, index;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//Use 'map' to create a new array. Because ids are in the same format of index numbers (int).</span></span><br><span class="line">            ids = student_data.map(<span class="function"><span class="keyword">function</span>(<span class="params">current</span>)</span>&#123;</span><br><span class="line">               <span class="keyword">return</span> current.student_id;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            index = ids.indexOf(student_id);</span><br><span class="line">            <span class="keyword">if</span>(index !== <span class="number">-1</span>)</span><br><span class="line">                student_data.splice(index, <span class="number">1</span>); <span class="comment">//use splice to delete item</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        print_all_students: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> student_data;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">student_info_controller.add_student(<span class="string">'Tracy'</span>, <span class="number">1995</span>);</span><br><span class="line"><span class="built_in">console</span>.log(student_info_controller.print_all_students());</span><br><span class="line"><span class="comment">// -&gt; Student &#123;first_name: "Tracy", year_of_birth: 1995, student_id: 0&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(student_info_controller.add_student(<span class="string">'Mary'</span>, <span class="number">1995</span>));</span><br><span class="line"><span class="built_in">console</span>.log(student_info_controller.does_exist_student(<span class="string">'Mary'</span>));</span><br><span class="line"><span class="comment">// -&gt; Mary is in the system.</span></span><br><span class="line">student_info_controller.delete_student_by_id(student_info_controller.find_student_id(<span class="string">'Mary'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(student_info_controller.does_exist_student(<span class="string">'Mary'</span>));</span><br><span class="line"><span class="comment">// -&gt; Mary is not in this system.</span></span><br></pre></td></tr></table></figure></p>
+        <h1 id="JPA-Java-Persistence-API"><a href="#JPA-Java-Persistence-API" class="headerlink" title="JPA - Java Persistence API"></a>JPA - Java Persistence API</h1><p>Persist data - 保存数据的意思<br>Java一般是操作objects，那么如何把objects和数据库联系起来？这就涉及到了ORM - Object Relational Mapping - class name就是tablename，class properties就是columns。ORM不限于Java。在Java中应用ORM需要一些工具，Hibernate就是其中一种，当然也有其他工具。假如在后期想把Hibernate换成其他的工具，不容易换，因为不同工具有不同的用途、结构等等。这时为了统一一下，JPA就引入作为comon standars。意思就是说，Hibernate implements JPA。视频原话解释：</p>
+<blockquote>
+<p>  JPA is just a specification. So if you want to work with JPA, you do need Hibernate or iBatis, or any of these for the implementation.<br>  So if you’re building a Hibernate project, then you are working with Hibernate. If you’re building a JPA project, then either you’re using Hibernate for the implementation or others. You cannot simply make a JPA application without any of these tools.<br>The importance of JPA is if you want to switch from one technology to another, you can do it very easily.</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/otinfgwkMbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<hr>
+<h1 id="Hibernate-Theory"><a href="#Hibernate-Theory" class="headerlink" title="Hibernate Theory"></a>Hibernate Theory</h1><p><img src="/images/in-post/hibernate-theory.jpeg" alt="hibernate-theory"></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8qZZeskl8Fc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
     </div>
     <div>
@@ -471,7 +474,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://zhiyu-tracy-yang.github.io/2018/05/10/JavaScript-Objects/" title="JavaScript Objects">http://zhiyu-tracy-yang.github.io/2018/05/10/JavaScript-Objects/</a>
+    <a href="http://zhiyu-tracy-yang.github.io/2018/10/31/jpa/" title="Hibernate笔记（更新中）">http://zhiyu-tracy-yang.github.io/2018/10/31/jpa/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -486,7 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
         </div>
       
@@ -499,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/07/master-project/" rel="next" title="自我反思——为什么要改毕设项目">
-                <i class="fa fa-chevron-left"></i> 自我反思——为什么要改毕设项目
+              <a href="/2018/10/28/java-inheritance/" rel="next" title="Java 继承和重写（待更新）">
+                <i class="fa fa-chevron-left"></i> Java 继承和重写（待更新）
               </a>
             
           </div>
@@ -508,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/11/cfls20thceremony/" rel="prev" title="庆祝朝外20周年校庆——印象最深刻的20件事（并没有朝外饭）">
-                庆祝朝外20周年校庆——印象最深刻的20件事（并没有朝外饭） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -681,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Objects-Summary"><span class="nav-number">1.</span> <span class="nav-text">Objects Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JPA-Java-Persistence-API"><span class="nav-number">1.</span> <span class="nav-text">JPA - Java Persistence API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hibernate-Theory"><span class="nav-number">2.</span> <span class="nav-text">Hibernate Theory</span></a></li></ol></div>
             
 
           </div>

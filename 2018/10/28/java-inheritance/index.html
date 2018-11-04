@@ -82,14 +82,14 @@
 <meta name="description" content="继承 Inheritance 提高代码的复用性 类与类之间产生了关系 -&amp;gt; 多态 只能单继承，只能继承一个 多层继承：A继承B，B继承C，A可以使用C的方法）  不要为了获取其他类的功能，简化代码而继承类与类之间要有所属关系才可以继承 (is a) 如果子类中出现非私有的同名成员变量时子类访问本类的变量用this子类访问父类的同名变量用superthis代表本类对象的引用super代表父类对">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Inheritance and Override">
+<meta property="og:title" content="Java 继承和重写（待更新）">
 <meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/index.html">
 <meta property="og:site_name" content="The Tracy Yang Journal">
 <meta property="og:description" content="继承 Inheritance 提高代码的复用性 类与类之间产生了关系 -&amp;gt; 多态 只能单继承，只能继承一个 多层继承：A继承B，B继承C，A可以使用C的方法）  不要为了获取其他类的功能，简化代码而继承类与类之间要有所属关系才可以继承 (is a) 如果子类中出现非私有的同名成员变量时子类访问本类的变量用this子类访问父类的同名变量用superthis代表本类对象的引用super代表父类对">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-30T22:49:07.354Z">
+<meta property="og:updated_time" content="2018-11-04T22:01:40.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Inheritance and Override">
+<meta name="twitter:title" content="Java 继承和重写（待更新）">
 <meta name="twitter:description" content="继承 Inheritance 提高代码的复用性 类与类之间产生了关系 -&amp;gt; 多态 只能单继承，只能继承一个 多层继承：A继承B，B继承C，A可以使用C的方法）  不要为了获取其他类的功能，简化代码而继承类与类之间要有所属关系才可以继承 (is a) 如果子类中出现非私有的同名成员变量时子类访问本类的变量用this子类访问父类的同名变量用superthis代表本类对象的引用super代表父类对">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Java Inheritance and Override | The Tracy Yang Journal</title>
+  <title>Java 继承和重写（待更新） | The Tracy Yang Journal</title>
   
 
 
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java Inheritance and Override</h1>
+          <h1 class="post-title" itemprop="name headline">Java 继承和重写（待更新）</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2018-10-30T22:49:07+00:00">
-                2018-10-30
+              <time title="Post updated" itemprop="dateModified" datetime="2018-11-04T22:01:40+00:00">
+                2018-11-04
               </time>
             
           </span>
@@ -449,8 +449,7 @@
 <p>修改原来的代码不方便，初期设计要留意后来代码的扩展性<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MobileTelephone</span> <span class="keyword">extends</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//System.out.println("Show numbers");</span></span><br><span class="line">        <span class="keyword">super</span>.show(); <span class="comment">//跟上面的那行一样，直接引用父类的</span></span><br><span class="line">        System.out.println(<span class="string">"Show photos"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show webpages"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>静态只能覆盖静态<br><strong>Override要求子类权限大于等于父类权限</strong><br>权限：public, private, 什么都不写(void show())是默认 - default。最大到最小：public &gt; protected &gt; default &gt; private。<br>如果子类重写父类时用了private，会报错，因为private（子类）比default（父类）的权限低。子类用default，父类用public的时候也会报错，因为default比public权限低。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MobileTelephone</span> <span class="keyword">extends</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//System.out.println("Show numbers");</span></span><br><span class="line">        <span class="keyword">super</span>.show(); <span class="comment">//跟上面的那行一样，直接引用父类的</span></span><br><span class="line">        System.out.println(<span class="string">"Show photos"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show webpages"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* error: show() in MobileTelephone cannot override show() in Telephone</span></span><br><span class="line"><span class="comment">    private void show()&#123;</span></span><br><span class="line"><span class="comment">                 ^</span></span><br><span class="line"><span class="comment">  attempting to assign weaker access privileges; was package</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
 <p>如果父类前加了private，可以正常编译，但是子类失去了访问权限<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MobileTelephone</span> <span class="keyword">extends</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show photos"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show webpages"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="重载Overload和重写Override的区别"><a href="#重载Overload和重写Override的区别" class="headerlink" title="重载Overload和重写Override的区别"></a>重载Overload和重写Override的区别</h1><p>重载Overload：只看同名函数的参数列表</p>
-<p>重写Override：子父类的方法要一模一样</p>
+<h1 id="重载Overload和重写Override的区别"><a href="#重载Overload和重写Override的区别" class="headerlink" title="重载Overload和重写Override的区别"></a>重载Overload和重写Override的区别</h1><p>重载Overload：只看同名函数的参数列表<br>重写Override：子父类的方法要一模一样</p>
 
       
     </div>
@@ -481,7 +480,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/" title="Java Inheritance and Override">http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/</a>
+    <a href="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/" title="Java 继承和重写（待更新）">http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -518,6 +517,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/31/jpa/" rel="prev" title="Hibernate笔记（更新中）">
+                Hibernate笔记（更新中） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -598,7 +601,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -728,7 +731,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <i class="fa fa-pencil"></i><span class="post-count">Total Word Count: 19.1k words.</span>
+  <i class="fa fa-pencil"></i><span class="post-count">Total Word Count: 19.3k words.</span>
 </div>
 
 <!--
