@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python Conditional Statements]]></title>
+    <url>%2F2018%2F12%2F06%2Fpython-course-1%2F</url>
+    <content type="text"><![CDATA[Programming for Everybody (Getting Started with Python), Course 1 Week 5 - Python Conditional Statements Conditional Statements注意if后面的冒号123456x = 5if x &lt; 10: print('Smaller')if x &gt; 20: print ('Larger')print('Finish') 用缩进，不是花括号1234567891011if x &gt; 2: print('Bigger than 2') #in the block print('Still bigger') #still in the blockprint('Done with 2') #out of the iffor i in range(5): #loop print(i) if i &gt; 3: print('Bigger than 3') print('Done with i', i); #out of ifprint('All done') #out of the for loop Nested If123456y = 42if y &gt; 1: print('Y is larger than 1') if y &lt; 100: print('Y is smaller than 100')print('All done') if-else12345y = 100if y == 100: print('Y is 100')else: print('Y is not 100') Multi-way (“elif” which is “else if”)123456if y &gt; 100: print('Y is larger than 100')elif y == 100: print('Y is 100')else: print('Y is smaller than 100') try-except (catch errors)12345678910111213str1 = 'Hello'try: num1 = int(str1) # trackback, error hereexcept: num1 = -1 # this returnprint('first string-', num1) # output: first string- -1str2 = '123'try: num1 = int(str2) # worksexcept: num1 = -1print('second string-', num1) # output: second string- 123 图中1正常，2出错，到3，4是不会运行的。所以在try里面写过多逻辑是不合理的，尽量简单。]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hibernate笔记（更新中）]]></title>
     <url>%2F2018%2F10%2F31%2Fjpa%2F</url>
     <content type="text"><![CDATA[JPA - Java Persistence APIPersist data - 保存数据的意思Java一般是操作objects，那么如何把objects和数据库联系起来？这就涉及到了ORM - Object Relational Mapping - class name就是tablename，class properties就是columns。ORM不限于Java。在Java中应用ORM需要一些工具，Hibernate就是其中一种，当然也有其他工具。假如在后期想把Hibernate换成其他的工具，不容易换，因为不同工具有不同的用途、结构等等。这时为了统一一下，JPA就引入作为comon standars。意思就是说，Hibernate implements JPA。视频原话解释： JPA is just a specification. So if you want to work with JPA, you do need Hibernate or iBatis, or any of these for the implementation. So if you’re building a Hibernate project, then you are working with Hibernate. If you’re building a JPA project, then either you’re using Hibernate for the implementation or others. You cannot simply make a JPA application without any of these tools.The importance of JPA is if you want to switch from one technology to another, you can do it very easily. Hibernate Theory]]></content>
