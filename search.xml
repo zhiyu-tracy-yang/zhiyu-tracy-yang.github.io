@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Python Conditional Statements]]></title>
+    <title><![CDATA[Python Week 6 - Functions]]></title>
+    <url>%2F2018%2F12%2F08%2Fpython-functions%2F</url>
+    <content type="text"><![CDATA[Programming for Everybody (Getting Started with Python), Course 1 Week 6 - Functions. ‘def’ keywordfunction用冒号结尾123456789101112def thing(): print('Hello') print('Tracy')thing()print(123)thing()# output:# Hello# Tracy# 123# Hello# Tracy Parameters1234567891011121314151617181920def greet(lang): if lang == 'es': print('Hola') elif lang == 'fr': print('Bonjour') else: print('Hello')greet('es')greet('fr')greet('en')# output# Hola# Bonjour# Hello# Multiple Parametersdef addTwo(a, b): return a + bprint(addTwo(1, 2))# output: 3 ‘return’1234def greet_with_return(): return('Hello,')print(greet_with_return(), 'Tracy')# output: Hello Tracy]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python Week 5 - Conditional Statements]]></title>
     <url>%2F2018%2F12%2F06%2Fpython-course-1%2F</url>
-    <content type="text"><![CDATA[Programming for Everybody (Getting Started with Python), Course 1 Week 5 - Python Conditional Statements Conditional Statements注意if后面的冒号123456x = 5if x &lt; 10: print('Smaller')if x &gt; 20: print ('Larger')print('Finish') 用缩进，不是花括号1234567891011if x &gt; 2: print('Bigger than 2') #in the block print('Still bigger') #still in the blockprint('Done with 2') #out of the iffor i in range(5): #loop print(i) if i &gt; 3: print('Bigger than 3') print('Done with i', i); #out of ifprint('All done') #out of the for loop Nested If123456y = 42if y &gt; 1: print('Y is larger than 1') if y &lt; 100: print('Y is smaller than 100')print('All done') if-else12345y = 100if y == 100: print('Y is 100')else: print('Y is not 100') Multi-way (“elif” which is “else if”)123456if y &gt; 100: print('Y is larger than 100')elif y == 100: print('Y is 100')else: print('Y is smaller than 100') try-except (catch errors)12345678910111213str1 = 'Hello'try: num1 = int(str1) # trackback, error hereexcept: num1 = -1 # this returnprint('first string-', num1) # output: first string- -1str2 = '123'try: num1 = int(str2) # worksexcept: num1 = -1print('second string-', num1) # output: second string- 123 图中1正常，2出错，到3，4是不会运行的。所以在try里面写过多逻辑是不合理的，尽量简单。]]></content>
+    <content type="text"><![CDATA[Programming for Everybody (Getting Started with Python), Course 1 Week 5 - Conditional Statements. 注意if后面的冒号123456x = 5if x &lt; 10: print('Smaller')if x &gt; 20: print ('Larger')print('Finish') 用缩进，不是花括号1234567891011if x &gt; 2: print('Bigger than 2') #in the block print('Still bigger') #still in the blockprint('Done with 2') #out of the iffor i in range(5): #loop print(i) if i &gt; 3: print('Bigger than 3') print('Done with i', i); #out of ifprint('All done') #out of the for loop Nested If123456y = 42if y &gt; 1: print('Y is larger than 1') if y &lt; 100: print('Y is smaller than 100')print('All done') if-else12345y = 100if y == 100: print('Y is 100')else: print('Y is not 100') Multi-way (“elif” which is “else if”)123456if y &gt; 100: print('Y is larger than 100')elif y == 100: print('Y is 100')else: print('Y is smaller than 100') try-except (catch errors)12345678910111213str1 = 'Hello'try: num1 = int(str1) # trackback, error hereexcept: num1 = -1 # this returnprint('first string-', num1) # output: first string- -1str2 = '123'try: num1 = int(str2) # worksexcept: num1 = -1print('second string-', num1) # output: second string- 123 图中1正常，2出错，到3，4是不会运行的。所以在try里面写过多逻辑是不合理的，尽量简单。]]></content>
       <categories>
         <category>Coding</category>
       </categories>
