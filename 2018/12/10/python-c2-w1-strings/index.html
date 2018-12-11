@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="The Tracy Yang Journal">
 <meta property="og:description" content="String manipulation in Python 3.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-11T19:51:04.298Z">
+<meta property="og:updated_time" content="2018-12-11T20:13:05.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Course 2 Week 1 - Strings">
 <meta name="twitter:description" content="String manipulation in Python 3.">
@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2018-12-11T19:51:04+00:00">
+              <time title="Post updated" itemprop="dateModified" datetime="2018-12-11T20:13:05+00:00">
                 2018-12-11
               </time>
             
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  532
+                  536
                 </span>
               
 
@@ -448,31 +448,31 @@
 <li><p>No first number: get the substring from 0 (including) to the second number (excluding)</p>
 </li>
 <li>No second number: get the substring from the first number (including) to the end</li>
-<li>Just colon operator: get the whole string<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(s[:<span class="number">2</span>]) <span class="comment">#Tr</span></span><br><span class="line">print(s[<span class="number">8</span>:]) <span class="comment">#ng</span></span><br><span class="line">print(s[:]) <span class="comment">#Tracy Yang</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>Just colon operator: get the whole string</li>
 </ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(s[:<span class="number">2</span>]) <span class="comment">#Tr</span></span><br><span class="line">print(s[<span class="number">8</span>:]) <span class="comment">#ng</span></span><br><span class="line">print(s[:]) <span class="comment">#Tracy Yang</span></span><br></pre></td></tr></table></figure>
 <h1 id="String-Concatenation"><a href="#String-Concatenation" class="headerlink" title="String Concatenation"></a>String Concatenation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'Hello'</span></span><br><span class="line">b = a + <span class="string">'There'</span></span><br><span class="line">print(b) <span class="comment"># output: HelloThere</span></span><br><span class="line">c = a + <span class="string">' '</span> + <span class="string">'There'</span></span><br><span class="line">print(c) <span class="comment"># output: Hello There</span></span><br></pre></td></tr></table></figure>
 <h1 id="Check-if-one-string-‘is’-in-another-string"><a href="#Check-if-one-string-‘is’-in-another-string" class="headerlink" title="Check if one string ‘is’ in another string"></a>Check if one string ‘is’ in another string</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'n'</span> <span class="keyword">in</span> fruit) <span class="comment">#True</span></span><br><span class="line">print(<span class="string">'m'</span> <span class="keyword">in</span> fruit) <span class="comment">#False</span></span><br><span class="line">print(<span class="string">'nan'</span> <span class="keyword">in</span> fruit) <span class="comment">#True</span></span><br></pre></td></tr></table></figure>
 <h1 id="Searching-a-String"><a href="#Searching-a-String" class="headerlink" title="Searching a String"></a>Searching a String</h1><p>string.find():</p>
 <ol>
 <li>Returns the index of the first occurrence</li>
-<li>Returns -1 if not found<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">na = fruit.find(<span class="string">'na'</span>)</span><br><span class="line"><span class="comment"># at index of 2</span></span><br><span class="line">print(na) <span class="comment"># output: 2 </span></span><br><span class="line">ma = fruit.find(<span class="string">'ma'</span>)</span><br><span class="line"><span class="comment"># not exist</span></span><br><span class="line">print(ma) <span class="comment"># output: -1</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>Returns -1 if not found</li>
 </ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">na = fruit.find(<span class="string">'na'</span>)</span><br><span class="line"><span class="comment"># at index of 2</span></span><br><span class="line">print(na) <span class="comment"># output: 2 </span></span><br><span class="line">ma = fruit.find(<span class="string">'ma'</span>)</span><br><span class="line"><span class="comment"># not exist</span></span><br><span class="line">print(ma) <span class="comment"># output: -1</span></span><br></pre></td></tr></table></figure>
 <h1 id="Make-Uppercase"><a href="#Make-Uppercase" class="headerlink" title="Make Uppercase"></a>Make Uppercase</h1><p>string.upper(): returns a new string, the old one doesn’t change.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">greet = <span class="string">'Hello Tracy'</span></span><br><span class="line">print(greet.upper()) <span class="comment"># output: HELLO TRACY</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Search-and-Replace"><a href="#Search-and-Replace" class="headerlink" title="Search and Replace"></a>Search and Replace</h1><p>string.replace()</p>
 <ol>
 <li>Replace a string with another, <strong>the old string doesn’t change</strong>. </li>
 <li>It replaces <strong>all occurrence</strong> in the old string. </li>
-<li>If the target substring is not found, then the <strong>original string is returned</strong>.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">greet2 = greet.replace(<span class="string">'Tracy'</span>, <span class="string">'Lucy'</span>)</span><br><span class="line">print(greet2) <span class="comment"># output: Hello Lucy</span></span><br><span class="line">print(greet) <span class="comment"># output: Hello Tracy</span></span><br><span class="line"><span class="comment"># 2.</span></span><br><span class="line">greet3 = greet.replace(<span class="string">'l'</span>, <span class="string">'!'</span>)</span><br><span class="line">print(greet3) <span class="comment"># output: He!!o Tracy</span></span><br><span class="line"><span class="comment"># 3.</span></span><br><span class="line">greet4 = greet.replace(<span class="string">'X'</span>, <span class="string">'a'</span>)</span><br><span class="line">print(greet4, <span class="number">123</span>) <span class="comment"># output: Hello Tracy 123</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>If the target substring is not found, then the <strong>original string is returned</strong>.</li>
 </ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">greet2 = greet.replace(<span class="string">'Tracy'</span>, <span class="string">'Lucy'</span>)</span><br><span class="line">print(greet2) <span class="comment"># output: Hello Lucy</span></span><br><span class="line">print(greet) <span class="comment"># output: Hello Tracy</span></span><br><span class="line"><span class="comment"># 2.</span></span><br><span class="line">greet3 = greet.replace(<span class="string">'l'</span>, <span class="string">'!'</span>)</span><br><span class="line">print(greet3) <span class="comment"># output: He!!o Tracy</span></span><br><span class="line"><span class="comment"># 3.</span></span><br><span class="line">greet4 = greet.replace(<span class="string">'X'</span>, <span class="string">'a'</span>)</span><br><span class="line">print(greet4, <span class="number">123</span>) <span class="comment"># output: Hello Tracy 123</span></span><br></pre></td></tr></table></figure>
 <h1 id="Stripping-Whitespace"><a href="#Stripping-Whitespace" class="headerlink" title="Stripping Whitespace"></a>Stripping Whitespace</h1><ol>
 <li>string.lstrip() and string.rstrip(): remove whitespace at left or right</li>
-<li>string.strip(): remove whitespace at both sides <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">whiteSpace = <span class="string">'    Hello There   '</span></span><br><span class="line">print(whiteSpace.lstrip()) <span class="comment"># output: 'Hello There   '</span></span><br><span class="line">print(whiteSpace.rstrip()) <span class="comment"># output: '    Hello There'</span></span><br><span class="line">print(whiteSpace.strip()) <span class="comment"># output: 'Hello There;</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>string.strip(): remove whitespace at both sides</li>
 </ol>
-<h1 id="Prefixes"><a href="#Prefixes" class="headerlink" title="Prefixes"></a>Prefixes</h1><p>string.startswith(str): return True if the string starts with the input, otherwise False.<br><code>`</code>python<br>line = ‘Please sit down.’<br>print(line.startswith(‘Please’)) # output: True<br>print(line.startswith(‘p’)) # output: False </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">whiteSpace = <span class="string">'    Hello There   '</span></span><br><span class="line">print(whiteSpace.lstrip()) <span class="comment"># output: 'Hello There   '</span></span><br><span class="line">print(whiteSpace.rstrip()) <span class="comment"># output: '    Hello There'</span></span><br><span class="line">print(whiteSpace.strip()) <span class="comment"># output: 'Hello There;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Prefixes"><a href="#Prefixes" class="headerlink" title="Prefixes"></a>Prefixes</h1><p>string.startswith(str): return True if the string starts with the input, otherwise False.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">line = <span class="string">'Please sit down.'</span></span><br><span class="line">print(line.startswith(<span class="string">'Please'</span>)) <span class="comment"># output: True</span></span><br><span class="line">print(line.startswith(<span class="string">'p'</span>)) <span class="comment"># output: False</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
