@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Python Week 6 - Functions]]></title>
-    <url>%2F2018%2F12%2F08%2Fpython-functions%2F</url>
-    <content type="text"><![CDATA[Programming for Everybody (Getting Started with Python), Course 1 Week 6 - Functions. ‘def’ keywordfunction用冒号结尾123456789101112def thing(): print('Hello') print('Tracy')thing()print(123)thing()# output:# Hello# Tracy# 123# Hello# Tracy Parameters1234567891011121314151617181920def greet(lang): if lang == 'es': print('Hola') elif lang == 'fr': print('Bonjour') else: print('Hello')greet('es')greet('fr')greet('en')# output# Hola# Bonjour# Hello# Multiple Parametersdef addTwo(a, b): return a + bprint(addTwo(1, 2))# output: 3 ‘return’1234def greet_with_return(): return('Hello,')print(greet_with_return(), 'Tracy')# output: Hello Tracy]]></content>
+    <title><![CDATA[Python Course 2 Week 1 - Strings]]></title>
+    <url>%2F2018%2F12%2F10%2Fpython-c2-w1-strings%2F</url>
+    <content type="text"><![CDATA[String manipulation in Python 3. Read from InputUse input() functionThe input data is string, needed to be converted to other data types if necessary, for example, num = int(str)1234name = input('Enter a name: ')print(name)# Enter a name: Tracy# Tracy Index of Strings12345fruit = 'banana'print(fruit[0]) # output: b. Pronouncation: fruit sub 0x = 3w = fruit[x - 1]print(w) # output: n Get the Length of a Stringlen() function1print(len(fruit)) # output: 6 Looping through Strings1234567891011# while loopindex = 0while index &lt; len(fruit): letter = fruit[index] print(index, letter) index += 1print('Done')# for loopfor letter in fruit: print(letter)print('Done') Slicing Strings Use the colon operator, ‘start’:’end’ The first number is including, the second number is excluding. If the second number is beyond the end of this string, it gets the rest of the string. 123s = 'Tracy Yang'print(s[0:4]) # output: Tracprint(s[4:20]) # output: y Yang No first number: get the substring from 0 (including) to the second number (excluding) No second number: get the substring from the first number (including) to the end Just colon operator: get the whole string123print(s[:2]) #Trprint(s[8:]) #ngprint(s[:]) #Tracy Yang String Concatenation12345a = 'Hello'b = a + 'There'print(b) # output: HelloTherec = a + ' ' + 'There'print(c) # output: Hello There Check if one string ‘is’ in another string123print('n' in fruit) #Trueprint('m' in fruit) #Falseprint('nan' in fruit) #True Searching a Stringstring.find(): Returns the index of the first occurrence Returns -1 if not found123456na = fruit.find('na')# at index of 2print(na) # output: 2 ma = fruit.find('ma')# not existprint(ma) # output: -1 Make Uppercasestring.upper(): returns a new string, the old one doesn’t change.12greet = 'Hello Tracy'print(greet.upper()) # output: HELLO TRACY Search and Replacestring.replace() Replace a string with another, the old string doesn’t change. It replaces all occurrence in the old string. If the target substring is not found, then the original string is returned.12345678910# 1.greet2 = greet.replace('Tracy', 'Lucy')print(greet2) # output: Hello Lucyprint(greet) # output: Hello Tracy# 2.greet3 = greet.replace('l', '!')print(greet3) # output: He!!o Tracy# 3.greet4 = greet.replace('X', 'a')print(greet4, 123) # output: Hello Tracy 123 Stripping Whitespace string.lstrip() and string.rstrip(): remove whitespace at left or right string.strip(): remove whitespace at both sides 1234whiteSpace = ' Hello There 'print(whiteSpace.lstrip()) # output: 'Hello There 'print(whiteSpace.rstrip()) # output: ' Hello There'print(whiteSpace.strip()) # output: 'Hello There; Prefixesstring.startswith(str): return True if the string starts with the input, otherwise False.`pythonline = ‘Please sit down.’print(line.startswith(‘Please’)) # output: Trueprint(line.startswith(‘p’)) # output: False]]></content>
       <categories>
         <category>Coding</category>
       </categories>
@@ -12,9 +12,31 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python Week 5 - Conditional Statements]]></title>
+    <title><![CDATA[Python Course 1 Week 7 - Loop and Iterations]]></title>
+    <url>%2F2018%2F12%2F09%2Fpython-week7-loop-and-iterations%2F</url>
+    <content type="text"><![CDATA[While and For loop in Python 3. While Loop1234567891011121314n = 5while n &gt; 0: print(n) n = n - 1print('Blastoff!')print(n)# output:# 5# 4# 3# 2# 1# Blastoff!# 0 ‘break’The ‘break’ statement ends the loop and jumps to the statement after the loop.123456while True: line = input('&gt; ') if line == 'done': break print(line)print('Done!') ‘continue’Go to the next iterationThe ‘continue’ statement quits the current iteration and goes to the next iteration.123456789101112while True: line = input('&gt; ') if line[0] == '#': continue if line == 'done': break print(line)print('Done')# output:# &gt; # don't print this# &gt; done# Done For Loop123for i in [5, 4, 3, 2, 1]: print(i)print('Done!') ‘in’Like forEach1234friends = ['Ann', 'Bob', 'Cathy']for friend in friends: print('Merry Christmas', friend + '!')print('Done') 12345678910111213# 'None' keyword: absense of value# 'is': check if two objects refer to the same object# 'is not': also a logical operator# '==': check if two objects have the same valuefound = Falsemin_new = None # we haven't see the valueprint('Before', found)for number in [2, 3, 34, 123, 100]: if min_new is None: # see the min first time min_new = number elif min_new &gt; number: min_new = numberprint('min_new:', min_new)]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python Course 1 Week 6 - Functions]]></title>
+    <url>%2F2018%2F12%2F08%2Fpython-functions%2F</url>
+    <content type="text"><![CDATA[Write and use functions in Python 3. ‘def’ keywordfunction用冒号结尾123456789101112def thing(): print('Hello') print('Tracy')thing()print(123)thing()# output:# Hello# Tracy# 123# Hello# Tracy Parameters1234567891011121314151617181920def greet(lang): if lang == 'es': print('Hola') elif lang == 'fr': print('Bonjour') else: print('Hello')greet('es')greet('fr')greet('en')# output# Hola# Bonjour# Hello# Multiple Parametersdef addTwo(a, b): return a + bprint(addTwo(1, 2))# output: 3 ‘return’1234def greet_with_return(): return('Hello,')print(greet_with_return(), 'Tracy')# output: Hello Tracy]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python Course 1 Week 5 - Conditional Statements]]></title>
     <url>%2F2018%2F12%2F06%2Fpython-course-1%2F</url>
-    <content type="text"><![CDATA[Programming for Everybody (Getting Started with Python), Course 1 Week 5 - Conditional Statements. 注意if后面的冒号123456x = 5if x &lt; 10: print('Smaller')if x &gt; 20: print ('Larger')print('Finish') 用缩进，不是花括号1234567891011if x &gt; 2: print('Bigger than 2') #in the block print('Still bigger') #still in the blockprint('Done with 2') #out of the iffor i in range(5): #loop print(i) if i &gt; 3: print('Bigger than 3') print('Done with i', i); #out of ifprint('All done') #out of the for loop Nested If123456y = 42if y &gt; 1: print('Y is larger than 1') if y &lt; 100: print('Y is smaller than 100')print('All done') if-else12345y = 100if y == 100: print('Y is 100')else: print('Y is not 100') Multi-way (“elif” which is “else if”)123456if y &gt; 100: print('Y is larger than 100')elif y == 100: print('Y is 100')else: print('Y is smaller than 100') try-except (catch errors)12345678910111213str1 = 'Hello'try: num1 = int(str1) # trackback, error hereexcept: num1 = -1 # this returnprint('first string-', num1) # output: first string- -1str2 = '123'try: num1 = int(str2) # worksexcept: num1 = -1print('second string-', num1) # output: second string- 123 图中1正常，2出错，到3，4是不会运行的。所以在try里面写过多逻辑是不合理的，尽量简单。]]></content>
+    <content type="text"><![CDATA[Conditional statements (if, elif, else) in Python 3. 注意if后面的冒号123456x = 5if x &lt; 10: print('Smaller')if x &gt; 20: print ('Larger')print('Finish') 用缩进，不是花括号1234567891011if x &gt; 2: print('Bigger than 2') #in the block print('Still bigger') #still in the blockprint('Done with 2') #out of the iffor i in range(5): #loop print(i) if i &gt; 3: print('Bigger than 3') print('Done with i', i); #out of ifprint('All done') #out of the for loop Nested If123456y = 42if y &gt; 1: print('Y is larger than 1') if y &lt; 100: print('Y is smaller than 100')print('All done') if-else12345y = 100if y == 100: print('Y is 100')else: print('Y is not 100') Multi-way (“elif” which is “else if”)123456if y &gt; 100: print('Y is larger than 100')elif y == 100: print('Y is 100')else: print('Y is smaller than 100') try-except (catch errors)12345678910111213str1 = 'Hello'try: num1 = int(str1) # trackback, error hereexcept: num1 = -1 # this returnprint('first string-', num1) # output: first string- -1str2 = '123'try: num1 = int(str2) # worksexcept: num1 = -1print('second string-', num1) # output: second string- 123 图中1正常，2出错，到3，4是不会运行的。所以在try里面写过多逻辑是不合理的，尽量简单。]]></content>
       <categories>
         <category>Coding</category>
       </categories>
