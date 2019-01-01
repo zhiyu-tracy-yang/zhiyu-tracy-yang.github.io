@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="The Tracy Yang Journal">
 <meta property="og:description" content="Data Structure - List in Python 3">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-13T20:06:19.000Z">
+<meta property="og:updated_time" content="2018-12-29T15:52:37.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Course 2 Week 4 - Lists">
 <meta name="twitter:description" content="Data Structure - List in Python 3">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2018-12-13T20:06:19+00:00">
-                2018-12-13
+              <time title="Post updated" itemprop="dateModified" datetime="2018-12-29T15:52:37+00:00">
+                2018-12-29
               </time>
             
           </span>
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  453
+                  491
                 </span>
               
 
@@ -446,7 +446,7 @@
 <h1 id="Slicing-Lists-Using"><a href="#Slicing-Lists-Using" class="headerlink" title="Slicing Lists Using :"></a>Slicing Lists Using :</h1><p>Like slicing strings.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(list4[<span class="number">1</span>:<span class="number">3</span>]) <span class="comment"># output: [2, 3]</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Building-a-List-from-Scratch"><a href="#Building-a-List-from-Scratch" class="headerlink" title="Building a List from Scratch"></a>Building a List from Scratch</h1><p>Use list() to build a list. Use list.append() to add new elements to the end of the new list.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fruits = list()</span><br><span class="line">fruits.append(<span class="string">'Apple'</span>)</span><br><span class="line">fruits.append(<span class="number">999</span>)</span><br><span class="line">print(fruits) <span class="comment"># output: ['Apple', 999]</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Checking-Elements-in-a-List-Using-in-not-in"><a href="#Checking-Elements-in-a-List-Using-in-not-in" class="headerlink" title="Checking Elements in a List Using in/not in"></a>Checking Elements in a List Using in/not in</h1><p>‘in’ or ‘not in’ returns a boolean<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">haveApple = <span class="string">'Apple'</span> <span class="keyword">in</span> fruits</span><br><span class="line">print(haveApple) <span class="comment"># output: True</span></span><br><span class="line">haveBanana = <span class="string">'Banana'</span> <span class="keyword">in</span> fruits</span><br><span class="line">print(haveBanana) <span class="comment"># output: False</span></span><br><span class="line">notHaveCherry = <span class="string">'Cherry'</span> <span class="keyword">not</span> <span class="keyword">in</span> fruits</span><br><span class="line">print(notHaveCherry) <span class="comment"># output: True</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="Sort-Lists-Using-list-sort"><a href="#Sort-Lists-Using-list-sort" class="headerlink" title="Sort Lists Using list.sort()"></a>Sort Lists Using list.sort()</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">12</span>, <span class="number">23</span>,<span class="number">23234234</span>, <span class="number">2342</span>, <span class="number">234123</span>]</span><br><span class="line">nums.sort()</span><br><span class="line">print(nums) <span class="comment"># output: [12, 23, 2342, 234123, 23234234]</span></span><br></pre></td></tr></table></figure>
+<h1 id="Sort-Lists-Using-list-sort-or-sorted-with-reverse"><a href="#Sort-Lists-Using-list-sort-or-sorted-with-reverse" class="headerlink" title="Sort Lists Using list.sort() or sorted() (with reverse)"></a>Sort Lists Using list.sort() or sorted() (with reverse)</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">12</span>, <span class="number">23</span>,<span class="number">23234234</span>, <span class="number">2342</span>, <span class="number">234123</span>]</span><br><span class="line">nums.sort() <span class="comment"># no assignment</span></span><br><span class="line">sortedNums = sorted(nums)</span><br><span class="line">print(nums) <span class="comment"># output: [12, 23, 2342, 234123, 23234234]</span></span><br><span class="line">print(sortedNums) <span class="comment"># output: [12, 23, 2342, 234123, 23234234]</span></span><br><span class="line"></span><br><span class="line">nums.sort(reverse = <span class="keyword">True</span>)</span><br><span class="line">reverseSortedNums = sorted(nums, reverse = <span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># output: [23234234, 234123, 2342, 23, 12]</span></span><br></pre></td></tr></table></figure>
 <h1 id="Math-Functions-with-Lists"><a href="#Math-Functions-with-Lists" class="headerlink" title="Math Functions with Lists"></a>Math Functions with Lists</h1><p>max(list), min(list), sum(list)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(max(nums)) <span class="comment"># 23234234</span></span><br><span class="line">print(min(nums)) <span class="comment"># 12</span></span><br><span class="line">print(sum(nums)) <span class="comment"># 23470734</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Split-Strings-to-Lists"><a href="#Split-Strings-to-Lists" class="headerlink" title="Split Strings to Lists"></a>Split Strings to Lists</h1><p>Default: string.split() splits a string by space and return a list.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruitsString = <span class="string">'Apple Banana Cherry'</span></span><br><span class="line">fruitsList = fruitsString.split()</span><br><span class="line">print(fruitsList) <span class="comment"># ['Apple', 'Banana', 'Cherry']</span></span><br></pre></td></tr></table></figure></p>
 <p>Use a delimiter: string.split(‘the_delimiter’)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruitsString2 = <span class="string">'Apple, Banana, Cherry'</span></span><br><span class="line">fruitsList2 = fruitsString2.split(<span class="string">', '</span>) <span class="comment"># split by a comma and a space</span></span><br><span class="line">print(fruitsList2) <span class="comment"># ['Apple', 'Banana', 'Cherry']</span></span><br></pre></td></tr></table></figure></p>
@@ -601,7 +601,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -690,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lists-Constants"><span class="nav-number">1.</span> <span class="nav-text">Lists Constants</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Index-Operator"><span class="nav-number">2.</span> <span class="nav-text">Index Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lengh-of-Lists"><span class="nav-number">3.</span> <span class="nav-text">Lengh of Lists</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Range-Function"><span class="nav-number">4.</span> <span class="nav-text">Range Function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Concatenating-Lists-Using"><span class="nav-number">5.</span> <span class="nav-text">Concatenating Lists Using +</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Slicing-Lists-Using"><span class="nav-number">6.</span> <span class="nav-text">Slicing Lists Using :</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Building-a-List-from-Scratch"><span class="nav-number">7.</span> <span class="nav-text">Building a List from Scratch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Checking-Elements-in-a-List-Using-in-not-in"><span class="nav-number">8.</span> <span class="nav-text">Checking Elements in a List Using in/not in</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sort-Lists-Using-list-sort"><span class="nav-number">9.</span> <span class="nav-text">Sort Lists Using list.sort()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Functions-with-Lists"><span class="nav-number">10.</span> <span class="nav-text">Math Functions with Lists</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Split-Strings-to-Lists"><span class="nav-number">11.</span> <span class="nav-text">Split Strings to Lists</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lists-Constants"><span class="nav-number">1.</span> <span class="nav-text">Lists Constants</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Index-Operator"><span class="nav-number">2.</span> <span class="nav-text">Index Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lengh-of-Lists"><span class="nav-number">3.</span> <span class="nav-text">Lengh of Lists</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Range-Function"><span class="nav-number">4.</span> <span class="nav-text">Range Function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Concatenating-Lists-Using"><span class="nav-number">5.</span> <span class="nav-text">Concatenating Lists Using +</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Slicing-Lists-Using"><span class="nav-number">6.</span> <span class="nav-text">Slicing Lists Using :</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Building-a-List-from-Scratch"><span class="nav-number">7.</span> <span class="nav-text">Building a List from Scratch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Checking-Elements-in-a-List-Using-in-not-in"><span class="nav-number">8.</span> <span class="nav-text">Checking Elements in a List Using in/not in</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sort-Lists-Using-list-sort-or-sorted-with-reverse"><span class="nav-number">9.</span> <span class="nav-text">Sort Lists Using list.sort() or sorted() (with reverse)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-Functions-with-Lists"><span class="nav-number">10.</span> <span class="nav-text">Math Functions with Lists</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Split-Strings-to-Lists"><span class="nav-number">11.</span> <span class="nav-text">Split Strings to Lists</span></a></li></ol></div>
             
 
           </div>
@@ -713,7 +713,7 @@
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -732,7 +732,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <i class="fa fa-pencil"></i><span class="post-count"> Total Word Count: 19.9k words.</span>
+  <i class="fa fa-pencil"></i><span class="post-count"> Total Word Count: 22.0k words.</span>
 </div>
 
 <!--
