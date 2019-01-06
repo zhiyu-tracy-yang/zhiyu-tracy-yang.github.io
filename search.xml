@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python Course 4 Week 2 - Database]]></title>
+    <url>%2F2019%2F01%2F06%2Fpython-c4-w2-database%2F</url>
+    <content type="text"><![CDATA[How to CRUD with Python3123456789101112131415161718192021222324252627282930313233343536373839404142434445464748# Read the file mbox.txt and count email domains of the senders.# Using sqlite3import sqlite3# Create a connectionconnection = sqlite3.connect('domainDB.sqlite')cursor = connection.cursor()cursor.execute('drop table if exists Counts')# Create the table with columnscursor.execute('create table Counts (domain text, count integer)')# Use a filehandler to read the filefileHandler = open('mbox.txt')counts = dict()domainList = list()for line in fileHandler: if not line.startswith('From: '): continue pieces = line.split() # get the line split by space email = pieces[1] # get the whole email pieces2 = email.split('@') # split the email address using '@' domain = pieces2[1] # get the domain name domainList.append(domain) # put the domain name into the listfor domain in domainList: counts[domain] = counts.get(domain, 0) + 1 # count domain namesprint(counts)for domain, count in counts.items(): # Insert results to the database # ? is the placeholder for parameters, it is a tuple. cursor.execute('insert into Counts (domain, count) values (?, ?)', (domain, count))# Commitconnection.commit()# Print the results from the databasesqlstr = 'select domain, count from Counts order by count desc'for row in cursor.execute(sqlstr): print(str(row[0]), row[1])# Close the connectionconnection.close()]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python Course 4 Week 1 - Objects]]></title>
     <url>%2F2019%2F01%2F03%2Fpython-c4-w1-objects%2F</url>
     <content type="text"><![CDATA[Objects in Python 3 Definitions Class: a template Attribute: a variable within a class Method: a function within a class Object: a particular instance of a class Constructor: code that runs when an object is created Inheritance: the ability to extend a class to make a new class Creating Objects12345678910111213141516class PartyAnimal: x = 0 def party(self): self.x = self.x + 1 print('So far', self.x)an = PartyAnimal()an.party()an.party()an.party()# output:# So far 1# So far 2# So far 3 InheritancePut the class in the subclass.123456789101112131415161718192021222324252627class PartyAnimal: x = 0 name = "" def __init__(self, newName): self.name = newName print(self.name, "Constructed") def party(self): self.x = self.x + 1 print('So far', self.x)class FootballFan(PartyAnimal): points = 0 def touchdown(self): self.points = self.points + 7 self.party() print(self.name, 'points', self.points)s = PartyAnimal("Sally") # Sally Constructeds.party() # So far 1j = FootballFan("Jim") # Jim Constructedj.party() # So far 2j.touchdown() # Jim points 7]]></content>
