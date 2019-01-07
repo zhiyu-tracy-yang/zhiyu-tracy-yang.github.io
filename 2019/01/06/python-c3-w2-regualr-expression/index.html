@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Java 继承和重写，暂时不更新。 继承 Inheritance 提高代码的复用性 类与类之间产生了关系 -&amp;gt; 多态 只能单继承，只能继承一个 多层继承：A继承B，B继承C，A可以使用C的方法）  不要为了获取其他类的功能，简化代码而继承类与类之间要有所属关系才可以继承 (is a) 如果子类中出现非私有的同名成员变量时子类访问本类的变量用this子类访问父类的同名变量用superthis代">
-<meta name="keywords" content="Java">
+<meta name="description" content="Regular Expressions in Python 3">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 继承和重写（待更新）">
-<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/index.html">
+<meta property="og:title" content="Python Course 3 Week 2 - Regualr Expression">
+<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2019/01/06/python-c3-w2-regualr-expression/index.html">
 <meta property="og:site_name" content="The Tracy Yang Journal">
-<meta property="og:description" content="Java 继承和重写，暂时不更新。 继承 Inheritance 提高代码的复用性 类与类之间产生了关系 -&amp;gt; 多态 只能单继承，只能继承一个 多层继承：A继承B，B继承C，A可以使用C的方法）  不要为了获取其他类的功能，简化代码而继承类与类之间要有所属关系才可以继承 (is a) 如果子类中出现非私有的同名成员变量时子类访问本类的变量用this子类访问父类的同名变量用superthis代">
+<meta property="og:description" content="Regular Expressions in Python 3">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-03T21:45:13.294Z">
+<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/regular-expression.png">
+<meta property="og:updated_time" content="2019-01-07T20:50:44.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 继承和重写（待更新）">
-<meta name="twitter:description" content="Java 继承和重写，暂时不更新。 继承 Inheritance 提高代码的复用性 类与类之间产生了关系 -&amp;gt; 多态 只能单继承，只能继承一个 多层继承：A继承B，B继承C，A可以使用C的方法）  不要为了获取其他类的功能，简化代码而继承类与类之间要有所属关系才可以继承 (is a) 如果子类中出现非私有的同名成员变量时子类访问本类的变量用this子类访问父类的同名变量用superthis代">
+<meta name="twitter:title" content="Python Course 3 Week 2 - Regualr Expression">
+<meta name="twitter:description" content="Regular Expressions in Python 3">
+<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/regular-expression.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/"/>
+  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2019/01/06/python-c3-w2-regualr-expression/"/>
 
 
 
 
 
-  <title>Java 继承和重写（待更新） | The Tracy Yang Journal</title>
+  <title>Python Course 3 Week 2 - Regualr Expression | The Tracy Yang Journal</title>
   
 
 
@@ -297,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/">
+    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2019/01/06/python-c3-w2-regualr-expression/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhiyu (Tracy) Yang">
@@ -314,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java 继承和重写（待更新）</h1>
+          <h1 class="post-title" itemprop="name headline">Python Course 3 Week 2 - Regualr Expression</h1>
         
 
         <div class="post-meta">
@@ -326,8 +328,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-28T19:26:02+00:00">
-                2018-10-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-06T16:58:52+00:00">
+                2019-01-06
               </time>
             
 
@@ -342,8 +344,8 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2019-01-03T21:45:13+00:00">
-                2019-01-03
+              <time title="Post updated" itemprop="dateModified" datetime="2019-01-07T20:50:44+00:00">
+                2019-01-07
               </time>
             
           </span>
@@ -394,7 +396,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  733
+                  452
                 </span>
               
 
@@ -431,23 +433,17 @@
       
 
       
-        <p>Java 继承和重写，暂时不更新。</p>
-<h1 id="继承-Inheritance"><a href="#继承-Inheritance" class="headerlink" title="继承 Inheritance"></a>继承 Inheritance</h1><ol>
-<li>提高代码的复用性</li>
-<li>类与类之间产生了关系 -&gt; 多态</li>
-<li>只能单继承，只能继承一个</li>
-<li>多层继承：A继承B，B继承C，A可以使用C的方法）</li>
-</ol>
-<p>不要为了获取其他类的功能，简化代码而继承<br>类与类之间要有所属关系才可以继承 (is a)</p>
-<p>如果子类中出现非私有的同名成员变量时<br>子类访问本类的变量用this<br>子类访问父类的同名变量用super<br>this代表本类对象的引用<br>super代表父类对象的引用</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">extends</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eatApple</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Eat an apple."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getFruitCount</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//"super" - 父类对象的引用</span></span><br><span class="line">        System.out.println(<span class="keyword">super</span>.count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getAppleCount</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">inheritanceDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Apple a = <span class="keyword">new</span> Apple();</span><br><span class="line">        a.getFruitCount(); <span class="comment">//5</span></span><br><span class="line">        a.getAppleCount(); <span class="comment">//1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="重写-Override"><a href="#重写-Override" class="headerlink" title="重写 Override"></a>重写 Override</h1><p>当子类出现和父类一模一样的函数时<br>父类函数被重写</p>
-<p>当子类继承父类，父类的功能沿袭到了子类中<br>但是子类设定的功能不一样<br>这时，没有必要另写功能，而是使用重写（Override）<br>保留父类的功能定义，重写功能内容</p>
-<p>可以想象成功能要升级，所以需要新的版本</p>
-<p>修改原来的代码不方便，初期设计要留意后来代码的扩展性<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MobileTelephone</span> <span class="keyword">extends</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//System.out.println("Show numbers");</span></span><br><span class="line">        <span class="keyword">super</span>.show(); <span class="comment">//跟上面的那行一样，直接引用父类的</span></span><br><span class="line">        System.out.println(<span class="string">"Show photos"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show webpages"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>静态只能覆盖静态<br><strong>Override要求子类权限大于等于父类权限</strong><br>权限：public, private, 什么都不写(void show())是默认 - default。最大到最小：public &gt; protected &gt; default &gt; private。<br>如果子类重写父类时用了private，会报错，因为private（子类）比default（父类）的权限低。子类用default，父类用public的时候也会报错，因为default比public权限低。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MobileTelephone</span> <span class="keyword">extends</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//System.out.println("Show numbers");</span></span><br><span class="line">        <span class="keyword">super</span>.show(); <span class="comment">//跟上面的那行一样，直接引用父类的</span></span><br><span class="line">        System.out.println(<span class="string">"Show photos"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show webpages"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* error: show() in MobileTelephone cannot override show() in Telephone</span></span><br><span class="line"><span class="comment">    private void show()&#123;</span></span><br><span class="line"><span class="comment">                 ^</span></span><br><span class="line"><span class="comment">  attempting to assign weaker access privileges; was package</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
-<p>如果父类前加了private，可以正常编译，但是子类失去了访问权限<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MobileTelephone</span> <span class="keyword">extends</span> <span class="title">Telephone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show numbers"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show photos"</span>);</span><br><span class="line">        System.out.println(<span class="string">"Show webpages"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="重载Overload和重写Override的区别"><a href="#重载Overload和重写Override的区别" class="headerlink" title="重载Overload和重写Override的区别"></a>重载Overload和重写Override的区别</h1><p>重载Overload：只看同名函数的参数列表<br>重写Override：子父类的方法要一模一样</p>
+        <p>Regular Expressions in Python 3<br><a id="more"></a></p>
+<h1 id="Regular-Expression-Quick-Guide"><a href="#Regular-Expression-Quick-Guide" class="headerlink" title="Regular Expression Quick Guide"></a>Regular Expression Quick Guide</h1><p><code>^</code> Matches the <font color="red">beginning</font> of a line<br><code>$</code> Matches the <font color="red">end</font> of the line<br><code>.</code> Matches <font color="red">any</font> character<br><code>\s</code> Matches <font color="red">whitespace</font><br><code>\S</code>  Matches any <font color="red">non-whitespace</font> character<br><code>\*</code>    <font color="red">Repeats</font> a character zero or more times<br><code>*?</code>   <font color="red">Repeats</font> a character zero or more time (non-greedy)<br><code>\+</code>    <font color="red">Repeats</font> a character one or more times<br><code>+?</code>   <font color="red">Repeats</font> a character one or more times (non-greedy)<br><code>[aeiou]</code>  Matches a single character in the listed <font color="red">set</font><br><code>[^XYZ]</code>  Matches a single character <font color="red">not in</font> the listed <font color="red">set</font><br><code>[a-z0-9]</code> The set of character can include a <font color="red">range</font><br><code>(</code>   Indicates where string <font color="red">extraction</font> is to start<br><code>)</code>   Indicates where string <font color="red">extraction</font> is to end</p>
+<h1 id="Import-the-library"><a href="#Import-the-library" class="headerlink" title="Import the library"></a>Import the library</h1><p>“import re” for the regular expression library</p>
+<h1 id="re-search"><a href="#re-search" class="headerlink" title="re.search()"></a>re.search()</h1><p>To see if a string matches a regular expression, similar to using the find() method of strings</p>
+<h1 id="re-findall"><a href="#re-findall" class="headerlink" title="re.findall()"></a>re.findall()</h1><p>To extract portions of a string that match your regular expression, similar to a combination of find() and slicing.<br><img src="/images/in-post/regular-expression.png" alt="regular-expression"></p>
+<h1 id="Extracting-Data"><a href="#Extracting-Data" class="headerlink" title="Extracting Data"></a>Extracting Data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using re.search()</span></span><br><span class="line">fileHandler = open(<span class="string">'mbox-short.txt'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fileHandler:</span><br><span class="line">    line = line.rstrip()</span><br><span class="line">    <span class="comment"># Search the lines that contain 'stephen'</span></span><br><span class="line">    <span class="keyword">if</span> re.search(<span class="string">'stephen'</span>, line):</span><br><span class="line">    <span class="comment"># is the same as:</span></span><br><span class="line">    <span class="comment"># if line.find('stephen') &gt;= 0:</span></span><br><span class="line">        print(<span class="string">'Has "stephen": '</span>, line)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Search the lines that start with 'From:'</span></span><br><span class="line">    <span class="keyword">if</span> re.search(<span class="string">'^From:'</span>, line):</span><br><span class="line">        <span class="comment"># is the same as:</span></span><br><span class="line">        <span class="comment"># if line.startswith('From:'):</span></span><br><span class="line">        print(<span class="string">'Starts with "From:"'</span>, line)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> re.search(<span class="string">'^X-\S+:'</span>, line):</span><br><span class="line">        print(<span class="string">'Starts with X and end with colon'</span>, line)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'My 2 favourite numbers are 9 and 32.'</span></span><br><span class="line"><span class="comment"># Find all numbers [0-9] in x, '+' means one or more times</span></span><br><span class="line"><span class="comment"># findall() returns a list. Its elements are strings, not numbers.</span></span><br><span class="line">y = re.findall(<span class="string">'[0-9]+'</span>, x)</span><br><span class="line">print(y) <span class="comment"># ['2', '9', '32']</span></span><br></pre></td></tr></table></figure>
+<h1 id="Greedy-and-None-Greedy-Matching"><a href="#Greedy-and-None-Greedy-Matching" class="headerlink" title="Greedy and None-Greedy Matching"></a>Greedy and None-Greedy Matching</h1><p>The repeat characters (* and +) return the largest (longest) results (greedy).<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'From: Using : character'</span></span><br><span class="line">b_greedy = re.findall(<span class="string">'^F.+:'</span>, a)</span><br><span class="line">print(b_greedy) <span class="comment"># ['From: Using :']</span></span><br><span class="line"></span><br><span class="line">b_not_greedy = re.findall(<span class="string">'^F.+?:'</span>, a)</span><br><span class="line">print(b_not_greedy) <span class="comment"># ['From:']</span></span><br></pre></td></tr></table></figure></p>
+<p>The regular expression wants to find parts that start with “F” and end with “:”. Because it has “+”, it is greedy.<br>There are two results matching the regular expression, “From:” and “From: Using :”. Because it is greedy, it returns the largest possible result, which is the second one.<br>The second example, b_not_greedy uses “+?”, which is not greedy. So it returns shorter ones.</p>
+<h1 id="Parentheses"><a href="#Parentheses" class="headerlink" title="Parentheses"></a>Parentheses</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c = <span class="string">'From tracy@gmail Sat Jan 5 11:16 pm'</span></span><br><span class="line"><span class="comment"># Use parentheses to only extract the inner part</span></span><br><span class="line">b_parentheses = re.findall(<span class="string">'^From (\S+@\S+)'</span>, c)</span><br><span class="line">print(b_parentheses) <span class="comment"># ['tracy@gmail']</span></span><br></pre></td></tr></table></figure>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>[^ ]: match non-blank character</p>
 
       
     </div>
@@ -478,7 +474,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/" title="Java 继承和重写（待更新）">http://zhiyu-tracy-yang.github.io/2018/10/28/java-inheritance/</a>
+    <a href="http://zhiyu-tracy-yang.github.io/2019/01/06/python-c3-w2-regualr-expression/" title="Python Course 3 Week 2 - Regualr Expression">http://zhiyu-tracy-yang.github.io/2019/01/06/python-c3-w2-regualr-expression/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -493,7 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -506,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/22/sql-summary/" rel="next" title="SQL总结（持更）">
-                <i class="fa fa-chevron-left"></i> SQL总结（持更）
+              <a href="/2019/01/06/python-c4-w2-database/" rel="next" title="Python Course 4 Week 2 - Database">
+                <i class="fa fa-chevron-left"></i> Python Course 4 Week 2 - Database
               </a>
             
           </div>
@@ -515,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/31/jpa/" rel="prev" title="Hibernate笔记（待更新）">
-                Hibernate笔记（待更新） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#继承-Inheritance"><span class="nav-number">1.</span> <span class="nav-text">继承 Inheritance</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重写-Override"><span class="nav-number">2.</span> <span class="nav-text">重写 Override</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重载Overload和重写Override的区别"><span class="nav-number">3.</span> <span class="nav-text">重载Overload和重写Override的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Regular-Expression-Quick-Guide"><span class="nav-number">1.</span> <span class="nav-text">Regular Expression Quick Guide</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Import-the-library"><span class="nav-number">2.</span> <span class="nav-text">Import the library</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#re-search"><span class="nav-number">3.</span> <span class="nav-text">re.search()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#re-findall"><span class="nav-number">4.</span> <span class="nav-text">re.findall()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extracting-Data"><span class="nav-number">5.</span> <span class="nav-text">Extracting Data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Greedy-and-None-Greedy-Matching"><span class="nav-number">6.</span> <span class="nav-text">Greedy and None-Greedy Matching</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Parentheses"><span class="nav-number">7.</span> <span class="nav-text">Parentheses</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">8.</span> <span class="nav-text">Tips</span></a></li></ol></div>
             
 
           </div>
