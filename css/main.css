@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0abebe;
+  background: #ff75ee;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3199,6 +3199,6 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("../images/bg/xv_@2X.png");
+  background: url("../images/bg/pink_rice.png");
   background-attachment: fixed;
 }
