@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F03%2F29%2Ftest%2F</url>
-    <content type="text"><![CDATA[this is a test]]></content>
-      <categories>
-        <category>Coding</category>
-      </categories>
+    <title><![CDATA[what i learned from work]]></title>
+    <url>%2F2019%2F03%2F29%2Fwhat-i-learned-from-work%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[bristol-20-things]]></title>
+    <url>%2F2019%2F03%2F29%2Fbristol-20-things%2F</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[Angular File Structure]]></title>
@@ -309,6 +311,6 @@
   <entry>
     <title><![CDATA[Hexo and Theme]]></title>
     <url>%2F2018%2F03%2F19%2FHexo-Common-Commands%2F</url>
-    <content type="text"><![CDATA[Hexo and theme changes. Create a new post 创建一个新的文章$ hexo new &quot;new post&quot; View site static 发布前预览$ hexo s Clean cache file 清理缓存（如果修改了格式）$ hexo clean Generate and deploy files 发布hexo g -d Change header image/Users/zhiyuyang/Documents/Blog/testBlog/themes/next/source/css/_custom]]></content>
+    <content type="text"><![CDATA[Hexo and theme changes. Create a new post 创建一个新的文章$ hexo new &quot;new post&quot; View site static 发布前预览$ hexo s Clean cache file 清理缓存（如果修改了格式）$ hexo clean Generate and deploy files 发布hexo g -d Change header image/testBlog/themes/next/source/css/_custom Change background image/testBlog/public/css/main.css]]></content>
   </entry>
 </search>

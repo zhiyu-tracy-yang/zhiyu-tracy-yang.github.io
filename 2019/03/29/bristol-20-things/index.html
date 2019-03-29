@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,20 +79,14 @@
 
 
 
-<meta name="description" content="Objects in Python 3">
-<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python Course 4 Week 1 - Objects">
-<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2019/01/03/python-c4-w1-objects/index.html">
+<meta property="og:title" content="bristol-20-things">
+<meta property="og:url" content="http://zhiyu-tracy-yang.github.io/2019/03/29/bristol-20-things/index.html">
 <meta property="og:site_name" content="The Tracy Yang Journal">
-<meta property="og:description" content="Objects in Python 3">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/objects.png">
-<meta property="og:updated_time" content="2019-01-03T21:41:47.390Z">
+<meta property="og:updated_time" content="2019-03-29T20:55:29.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python Course 4 Week 1 - Objects">
-<meta name="twitter:description" content="Objects in Python 3">
-<meta name="twitter:image" content="http://zhiyu-tracy-yang.github.io/images/in-post/objects.png">
+<meta name="twitter:title" content="bristol-20-things">
 
 
 
@@ -122,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2019/01/03/python-c4-w1-objects/"/>
+  <link rel="canonical" href="http://zhiyu-tracy-yang.github.io/2019/03/29/bristol-20-things/"/>
 
 
 
 
 
-  <title>Python Course 4 Week 1 - Objects | The Tracy Yang Journal</title>
+  <title>bristol-20-things | The Tracy Yang Journal</title>
   
 
 
@@ -299,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2019/01/03/python-c4-w1-objects/">
+    <link itemprop="mainEntityOfPage" href="http://zhiyu-tracy-yang.github.io/2019/03/29/bristol-20-things/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhiyu (Tracy) Yang">
@@ -316,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python Course 4 Week 1 - Objects</h1>
+          <h1 class="post-title" itemprop="name headline">bristol-20-things</h1>
         
 
         <div class="post-meta">
@@ -328,8 +322,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-03T20:35:54+00:00">
-                2019-01-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-29T20:55:29+00:00">
+                2019-03-29
               </time>
             
 
@@ -344,34 +338,12 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2019-01-03T21:41:47+00:00">
-                2019-01-03
+              <time title="Post updated" itemprop="dateModified" datetime="2019-03-29T20:55:29+00:00">
+                2019-03-29
               </time>
             
           </span>
           
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Coding/" itemprop="url" rel="index">
-                    <span itemprop="name">Coding</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -396,7 +368,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  210
+                  0
                 </span>
               
 
@@ -433,19 +405,7 @@
       
 
       
-        <p>Objects in Python 3<br><a id="more"></a></p>
-<h1 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h1><ul>
-<li>Class: a template</li>
-<li>Attribute: a variable within a class</li>
-<li>Method: a function within a class</li>
-<li>Object: a particular instance of a class</li>
-<li>Constructor: code that runs when an object is created</li>
-<li>Inheritance: the ability to extend a class to make a new class</li>
-</ul>
-<h1 id="Creating-Objects"><a href="#Creating-Objects" class="headerlink" title="Creating Objects"></a>Creating Objects</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PartyAnimal</span>:</span></span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">party</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = self.x + <span class="number">1</span></span><br><span class="line">        print(<span class="string">'So far'</span>, self.x)</span><br><span class="line"></span><br><span class="line">an = PartyAnimal()</span><br><span class="line"></span><br><span class="line">an.party()</span><br><span class="line">an.party()</span><br><span class="line">an.party()</span><br><span class="line"><span class="comment"># output:</span></span><br><span class="line"><span class="comment"># So far 1</span></span><br><span class="line"><span class="comment"># So far 2</span></span><br><span class="line"><span class="comment"># So far 3</span></span><br></pre></td></tr></table></figure>
-<p><img src="/images/in-post/objects.png" alt="objects"></p>
-<h1 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h1><p>Put the class in the subclass.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PartyAnimal</span>:</span></span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    name = <span class="string">""</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, newName)</span>:</span></span><br><span class="line">        self.name = newName</span><br><span class="line">        print(self.name, <span class="string">"Constructed"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">party</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = self.x + <span class="number">1</span></span><br><span class="line">        print(<span class="string">'So far'</span>, self.x)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FootballFan</span><span class="params">(PartyAnimal)</span>:</span></span><br><span class="line"></span><br><span class="line">    points = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">touchdown</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.points = self.points + <span class="number">7</span></span><br><span class="line">        self.party()</span><br><span class="line">        print(self.name, <span class="string">'points'</span>, self.points)</span><br><span class="line"></span><br><span class="line">s = PartyAnimal(<span class="string">"Sally"</span>) <span class="comment"># Sally Constructed</span></span><br><span class="line">s.party() <span class="comment"># So far 1</span></span><br><span class="line"></span><br><span class="line">j = FootballFan(<span class="string">"Jim"</span>) <span class="comment"># Jim Constructed</span></span><br><span class="line">j.party() <span class="comment"># So far 2</span></span><br><span class="line">j.touchdown() <span class="comment"># Jim points 7</span></span><br></pre></td></tr></table></figure></p>
-
+        
       
     </div>
     <div>
@@ -475,7 +435,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://zhiyu-tracy-yang.github.io/2019/01/03/python-c4-w1-objects/" title="Python Course 4 Week 1 - Objects">http://zhiyu-tracy-yang.github.io/2019/01/03/python-c4-w1-objects/</a>
+    <a href="http://zhiyu-tracy-yang.github.io/2019/03/29/bristol-20-things/" title="bristol-20-things">http://zhiyu-tracy-yang.github.io/2019/03/29/bristol-20-things/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -488,12 +448,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-        </div>
-      
 
       
       
@@ -503,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/30/annual-personal-summary-2018/" rel="next" title="2017年7月 - 2018年12月总结">
-                <i class="fa fa-chevron-left"></i> 2017年7月 - 2018年12月总结
+              <a href="/2019/02/06/Angular-File-Structure/" rel="next" title="Angular File Structure">
+                <i class="fa fa-chevron-left"></i> Angular File Structure
               </a>
             
           </div>
@@ -513,8 +467,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/06/python-c4-w2-database/" rel="prev" title="Python Course 4 Week 2 - Database">
-                Python Course 4 Week 2 - Database <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/29/what-i-learned-from-work/" rel="prev" title="what i learned from work">
+                what i learned from work <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -567,17 +521,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -675,22 +620,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definitions"><span class="nav-number">1.</span> <span class="nav-text">Definitions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Creating-Objects"><span class="nav-number">2.</span> <span class="nav-text">Creating Objects</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Inheritance"><span class="nav-number">3.</span> <span class="nav-text">Inheritance</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
