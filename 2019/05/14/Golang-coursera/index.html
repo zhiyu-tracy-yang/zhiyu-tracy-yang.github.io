@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="The Tracy Yang Journal">
 <meta property="og:description" content="Golang">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-14T22:11:36.442Z">
+<meta property="og:updated_time" content="2019-05-15T20:41:04.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Golang-coursera">
 <meta name="twitter:description" content="Golang">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">Post updated&#58;</span>
               
-              <time title="Post updated" itemprop="dateModified" datetime="2019-05-14T23:11:36+01:00">
-                2019-05-14
+              <time title="Post updated" itemprop="dateModified" datetime="2019-05-15T21:41:04+01:00">
+                2019-05-15
               </time>
             
           </span>
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  104
+                  200
                 </span>
               
 
@@ -443,7 +443,11 @@
 <h1 id="M1-2-3-Go-Tool"><a href="#M1-2-3-Go-Tool" class="headerlink" title="M1.2.3 - Go Tool"></a>M1.2.3 - Go Tool</h1><h2 id=""><a href="#" class="headerlink" title=""></a><figure class="highlight go"><figcaption><span>build```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Compiles the program</span><br><span class="line">- Arguments can be a list of packages or a list of .<span class="keyword">go</span> fiels</span><br><span class="line">- creates an executable <span class="keyword">for</span> the main <span class="keyword">package</span>, same name as the first .<span class="keyword">go</span> file</span><br><span class="line">## <span class="string">``</span><span class="string">`go doc</span></span><br></pre></td></tr></table></figure></h2><p>Print documentation for a package</p>
 <h2 id="-1"><a href="#-1" class="headerlink" title=""></a><figure class="highlight go"><figcaption><span>fmt```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Format source code files</span><br><span class="line">## <span class="string">``</span><span class="string">`go get</span></span><br></pre></td></tr></table></figure></h2><p>Download packages and install them</p>
 <h2 id="-2"><a href="#-2" class="headerlink" title=""></a><figure class="highlight go"><figcaption><span>list```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List all installed packages</span><br><span class="line">## <span class="string">``</span><span class="string">`go run</span></span><br></pre></td></tr></table></figure></h2><p>Compile .go files and run the executable</p>
-<h2 id="go-test"><a href="#go-test" class="headerlink" title="go test"></a><code>go test</code></h2><p>Run tests using files ending in “_test.go”</p>
+<h2 id="-3"><a href="#-3" class="headerlink" title=""></a><figure class="highlight go"><figcaption><span>test```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Run tests using files ending in <span class="string">"_test.go"</span></span><br><span class="line"></span><br><span class="line"># M1<span class="number">.3</span><span class="number">.2</span> - Variable Initialization</span><br><span class="line">## Initializing Variables</span><br></pre></td></tr></table></figure></h2><p>//Initialize in the declaration with type<br>var x int = 100<br>//Initialize in the declaration without type<br>var x = 100<br>//Initialize after declaration with type<br>var x int<br>x = 100<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**Uninitialized variables have a zero value of its type**</span><br></pre></td></tr></table></figure></p>
+<p>var x int // x = 0<br>var x string // x = “”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">## Short Variable Declarations</span><br><span class="line">- Can perform a declaration and initialization together with the := operator</span><br><span class="line"></span><br><span class="line">  ``` x := 100</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Variable is declared as type of expression on the right hand side<br><strong>Can only do this inside a function</strong></li>
+</ul>
 
       
     </div>
@@ -680,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#M1-2-2-Workspaces-amp-Packages"><span class="nav-number">1.</span> <span class="nav-text">M1.2.2 - Workspaces &amp; Packages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#M1-2-3-Go-Tool"><span class="nav-number">2.</span> <span class="nav-text">M1.2.3 - Go Tool</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.1.</span> <span class="nav-text">build```1234Compiles the program- Arguments can be a list of packages or a list of .go fiels- creates an executable for the main package, same name as the first .go file## ```go doc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">2.2.</span> <span class="nav-text">fmt```12Format source code files## ```go get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-2"><span class="nav-number">2.3.</span> <span class="nav-text">list```12List all installed packages## ```go run</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#go-test"><span class="nav-number">2.4.</span> <span class="nav-text">go test</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#M1-2-2-Workspaces-amp-Packages"><span class="nav-number">1.</span> <span class="nav-text">M1.2.2 - Workspaces &amp; Packages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#M1-2-3-Go-Tool"><span class="nav-number">2.</span> <span class="nav-text">M1.2.3 - Go Tool</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.1.</span> <span class="nav-text">build```1234Compiles the program- Arguments can be a list of packages or a list of .go fiels- creates an executable for the main package, same name as the first .go file## ```go doc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">2.2.</span> <span class="nav-text">fmt```12Format source code files## ```go get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-2"><span class="nav-number">2.3.</span> <span class="nav-text">list```12List all installed packages## ```go run</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-3"><span class="nav-number">2.4.</span> <span class="nav-text">test```1234Run tests using files ending in &quot;_test.go&quot;# M1.3.2 - Variable Initialization## Initializing Variables</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -722,7 +726,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <i class="fa fa-pencil"></i><span class="post-count"> Total Word Count: 23.5k words.</span>
+  <i class="fa fa-pencil"></i><span class="post-count"> Total Word Count: 23.6k words.</span>
 </div>
 
 <!--
