@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Golang-coursera]]></title>
-    <url>%2F2019%2F05%2F14%2FGolang-coursera%2F</url>
-    <content type="text"><![CDATA[Golang M1.2.2 - Workspaces &amp; Packages Three subdirectories src - source code files pkg - packages (libraries) bin - executables M1.2.3 - Go Toolbuild```1234Compiles the program- Arguments can be a list of packages or a list of .go fiels- creates an executable for the main package, same name as the first .go file## ```go docPrint documentation for a package fmt```12Format source code files## ```go getDownload packages and install them list```12List all installed packages## ```go runCompile .go files and run the executable test```1234Run tests using files ending in "_test.go"# M1.3.2 - Variable Initialization## Initializing Variables//Initialize in the declaration with typevar x int = 100//Initialize in the declaration without typevar x = 100//Initialize after declaration with typevar x intx = 1001**Uninitialized variables have a zero value of its type** var x int // x = 0var x string // x = “”1234## Short Variable Declarations- Can perform a declaration and initialization together with the := operator ``` x := 100 Variable is declared as type of expression on the right hand sideCan only do this inside a function]]></content>
-      <categories>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Golang</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[工作总结]]></title>
     <url>%2F2019%2F03%2F29%2Fwhat-i-learned-from-work%2F</url>
     <content type="text"><![CDATA[记录工作中犯的错误和关于工作的建议 不应该再犯的错误不是组内的事情都要请示领导 事件：组外的S同事来找我帮忙新建一个Jira ticket，我看这个忙不难，就答应了。 不利影响：他的需求在我们组项目内，我贸然帮他新建一个需求会影响下一个sprint或者项目的范围，这个影响我没有预料到。 正确的处理方式：帮他忙之前，问清楚他的需求。如果拿不准，直接问领导或者让他和领导说。不要自己揽下来。要自己寻求各种方法推进任务的进度 事件：一些任务很难推进，自己在Jira上标成了Blocked。比如，需要美国同事帮助的、在等印度同事回复等，没有催促或者提醒他们。 不利影响：一直等别人的回复，任务无法推进。 正确的处理方式：试试以下几种：1）给同事发邮件/Skype问问他们等进度；2）给另外负责相同/类似事件等同事发邮件/Skype；3）问组内其他成员有没有办法或者他们认识的人；4）实在没有任何办法了再跟领导说 建议成为一个值得托付、让领导同事放心的人 无语法、拼写错误 表达逻辑清楚，数据和事实相结合（还需要练） 排版、细节（版本号、Jira 任务号、链接等）不出错 工作是第一位，但也要和同事处理好关系，照顾他们的情绪 少说话多做事。比努力更重要的是成事说话 不说抱怨的话 不说炫耀的话 不说气话]]></content>
